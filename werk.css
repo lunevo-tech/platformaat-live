@@ -148,3 +148,17 @@ form input::placeholder { color: #a0afc9; }
 .ontdek-grid a { color: var(--ink); text-decoration: none; border-bottom: 1px solid #a8b4cb; }
 .ontdek-grid a:hover { color: var(--acc-text); border-bottom-color: var(--blue); }
 @media (max-width: 850px) { .ontdek-grid { grid-template-columns: 1fr; } }
+
+/* ---------- 41: calculator ---------- */
+.calc { max-width: 620px; margin: 16px 0 8px; }
+.calc-rij { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 8px 20px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.calc-rij label { font-size: 16px; color: var(--ink); font-weight: 400; }
+.calc-rij input { font: inherit; padding: 9px 10px; border: 1px solid #a8b4cb; border-radius: 3px; background: var(--paper, #fff); color: var(--ink); width: 100%; box-sizing: border-box; }
+.calc-rij input:focus-visible, .calc-knop:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }
+.calc-uitkomst { margin: 18px 0 10px; padding: 18px 22px; border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: 3px; max-width: 620px; }
+.calc-uitkomst p { margin: 0 0 8px; max-width: none; }
+.calc-uitkomst p:last-child { margin-bottom: 0; }
+.calc-noot { color: var(--muted); font-size: 15px; }
+.calc-knop { font: inherit; font-weight: 600; padding: 9px 16px; border: 1px solid #a8b4cb; border-radius: 3px; background: transparent; color: var(--ink); cursor: pointer; }
+.calc-knop:hover { border-color: var(--blue); }
+@media (max-width: 600px) { .calc-rij { grid-template-columns: 1fr; } }

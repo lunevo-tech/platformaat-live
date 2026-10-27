@@ -1,0 +1,32 @@
+# PlatforMaat
+
+> PlatforMaat bouwt software op maat, websites, koppelingen en AI-toepassingen voor kleine en middelgrote bedrijven in België. Gevestigd in Antwerpen (Hoboken). Vaste prijs in een offerte op maat; gegevens van de klant zijn exporteerbaar en bij klantspecifiek maatwerk gaat de code over naar de klant; hosting in de EU met verwerkersovereenkomst.
+
+Bedrijfsgegevens: PlatforMaat is een eenmanszaak (handelsnaam), ondernemingsnummer en btw-nummer BE 1004.326.518, Meetjeslandstraat 44, 2660 Antwerpen. Contact: info@platformaat.be.
+
+## Aanbod
+- [Maatwerksoftware en portalen](https://platformaat.be/diensten/maatwerksoftware.html)
+- [Websites, webshops en apps](https://platformaat.be/diensten/apps-websites-webshops.html)
+- [Koppelingen, automatisering en data](https://platformaat.be/diensten/koppelingen.html)
+- [AI voor kmo's](https://platformaat.be/diensten/ai.html)
+- [Advies en ontwerp](https://platformaat.be/diensten/advies-ontwerp.html)
+- [Onderhoud en support](https://platformaat.be/diensten/onderhoud.html)
+
+## Praktijkvoorbeelden
+- [Offerteplatform voor een zaak in vliegenramen en raamdecoratie](https://platformaat.be/case-vekemans.html): offerte van 15 minuten naar minder dan 1 minuut
+- [Intern platform voor een onderneming in vindbaarheid via Google](https://platformaat.be/case-zichtbaar-media.html)
+- [Website en kassasysteem voor een pizzeria in Antwerpen](https://platformaat.be/case-la-mia.html)
+
+## Kennis
+- [Alle gidsen](https://platformaat.be/kennis.html)
+- [Veelgestelde vragen](https://platformaat.be/faq.html)
+- [Wat kost maatwerksoftware](https://platformaat.be/gids-wat-kost-maatwerksoftware.html)
+- [Besparingscalculator](https://platformaat.be/besparingscalculator.html)
+- [Koppelingen met pakketten](https://platformaat.be/koppelingen-met-pakketten.html)
+
+## Per sector
+- [Overzicht van sectoren](https://platformaat.be/sectoren.html)
+
+## Optioneel
+- [Bedrijfsgegevens](https://platformaat.be/bedrijfsgegevens.html)
+- [Privacy](https://platformaat.be/privacy.html)

@@ -28,7 +28,7 @@
   }
   function tekst() {
     var w = waarden();
-    return 'Hallo PlatforMaat,\n\nMijn naam is ' + (w.name || '').trim() + '.\nMijn e-mailadres: ' + (w.email || '').trim() + '\nIk denk aan: ' + (w.interest || '') + '\n\n' + (w.message || '').trim();
+    return 'Hallo PlatforMaat,\n\nMijn naam is ' + (w.name || '').trim() + '.\nMijn e-mailadres: ' + (w.email || '').trim() + '\nIk denk aan: ' + (w.interest || '') + '\n\n' + (w.message || '').trim() + (w.bron ? '\n\nHoe vond je ons: ' + w.bron : '');
   }
   function ververs() {
     if (mailapp) mailapp.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Projectvraag: ' + (waarden().interest || '')) + '&body=' + encodeURIComponent(tekst());
@@ -55,7 +55,7 @@
     }
     bezig = true; knop.disabled = true; var oud = knop.textContent; knop.textContent = 'Bezig met versturen…';
     meld('Je vraag wordt verstuurd…');
-    fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: w.name, email: w.email, interest: w.interest, message: w.message, website: w.website || '' }), signal: AbortSignal.timeout ? AbortSignal.timeout(25000) : undefined })
+    fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name: w.name, email: w.email, interest: w.interest, message: w.message + (w.bron ? '\n\nHoe vond je ons: ' + w.bron : ''), website: w.website || '' }), signal: AbortSignal.timeout ? AbortSignal.timeout(25000) : undefined })
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }, function () { return { ok: false, j: null }; }); })
       .then(function (x) {
         if (!x.ok || !x.j || x.j.sent !== true) { meld((x.j && x.j.message) || 'Versturen lukt nu niet. Je tekst blijft staan; probeer later opnieuw of mail ons rechtstreeks.', 'error'); return; }
