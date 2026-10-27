@@ -118,3 +118,33 @@ form input::placeholder { color: #a0afc9; }
   .tabel-wrap tbody th { width: auto; font-size: 16px; }
   .tabel-wrap td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--ink); margin-bottom: 1px; }
 }
+
+/* ---------- 40: nieuwe pagina's voor vindbaarheid ---------- */
+.pagina .lead { font-size: 19px; line-height: 1.65; max-width: 62ch; color: var(--ink); }
+.pagina p { margin: 0 0 12px; }
+.pagina h2 { margin-top: 34px; }
+.pagina h3 { font-size: 17px; margin: 22px 0 4px; }
+.pagina ul { margin: 8px 0 12px; }
+.pagina li { margin-bottom: 4px; }
+.pagina .verwant { list-style: none; padding-left: 0; border-top: 1px solid var(--line); }
+.pagina .verwant li { padding: 12px 0; border-bottom: 1px solid var(--line); margin: 0; }
+.pagina .verwant a { font-weight: 600; color: var(--ink); text-decoration: none; border-bottom: 1px solid #a8b4cb; }
+.pagina .verwant a:hover { color: var(--acc-text); border-bottom-color: var(--blue); }
+.pagina .verwant span { display: block; color: var(--muted); font-size: 15px; margin-top: 2px; max-width: 70ch; }
+.cta-blok { margin: 34px 0 8px; padding: 22px 24px; border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: 3px; }
+.cta-blok p { margin: 0 0 10px; max-width: 62ch; }
+.cta-blok p:last-child { margin-bottom: 0; }
+.cta-link { display: inline-block; margin-right: 14px; font-weight: 600; color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--blue); padding-bottom: 1px; }
+.cta-link-2 { border-bottom-color: #a8b4cb; font-weight: 500; }
+.case-logo-pagina { margin: 6px 0 4px; padding: 14px 18px; display: inline-block; background: #ffffff; border: 1px solid #d9dfea; border-radius: 3px; color-scheme: light; }
+.case-logo-pagina img { display: block; max-height: 64px; width: auto; max-width: 240px; }
+.case-link { margin: 12px 0 0 !important; }
+.case-link a { font-weight: 600; font-size: 15px; color: var(--ink); text-decoration: none; border-bottom: 1px solid #a8b4cb; }
+.case-link a:hover { color: var(--acc-text); border-bottom-color: var(--blue); }
+.ontdek-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 48px; border-top: 1px solid var(--line); padding-top: 22px; }
+.ontdek-grid h3 { font-size: 14px; font-weight: 600; margin: 0 0 8px; color: var(--acc-text); }
+.ontdek-grid ul { list-style: none; margin: 0; padding: 0; }
+.ontdek-grid li { padding: 5px 0; }
+.ontdek-grid a { color: var(--ink); text-decoration: none; border-bottom: 1px solid #a8b4cb; }
+.ontdek-grid a:hover { color: var(--acc-text); border-bottom-color: var(--blue); }
+@media (max-width: 850px) { .ontdek-grid { grid-template-columns: 1fr; } }
