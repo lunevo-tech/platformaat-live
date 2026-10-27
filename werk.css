@@ -1,0 +1,120 @@
+/* 30 Licht werk: 29 met (1) diensten die alleen na een klik wisselen, (2) een korte bedrijfsintroductie zonder persoonsnaam, (3) een afgewerkt contactblok en een afgewerkte voet met conceptpagina's,
+   (4) een sectie met werk (Vekemans, La Mia, Zichtbaar Media) en (5) licht/donker dat het apparaat volgt, met een knop rechtsonder om zelf te kiezen. */
+
+/* ---------- weergave-knop rechtsonder ---------- */
+.theme30 { position: fixed; right: 16px; bottom: 16px; z-index: 30; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; background: var(--paper, #f7f8fb); color: var(--ink, #14213d); border: 1px solid #b7c1d3; border-radius: 4px; font: 600 13px/1 Arial, Helvetica, sans-serif; cursor: pointer; box-shadow: none; }
+.theme30:hover { border-color: var(--blue); }
+.theme30:focus-visible { outline: 3px solid #809cff; outline-offset: 3px; }
+.theme30 svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; }
+[data-theme="dark"] .theme30 { background: #17233b; color: #edf2ff; border-color: #506184; }
+[data-theme="dark"] .theme30:hover { border-color: #86a2ff; }
+@media (max-width: 800px) { .theme30 { right: 10px; bottom: 64px; } }
+.theme-switch { display: none !important; }
+.footer { padding-bottom: 38px; }
+.site-foot { padding-bottom: 96px; }
+
+/* ---------- korte introductie ---------- */
+.intro { padding: 54px 0 4px; }
+.intro-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 56px; align-items: start; padding-top: 34px; border-top: 1px solid var(--line); }
+.intro h2 { font-size: clamp(24px, 2.4vw, 32px); letter-spacing: -1px; line-height: 1.15; margin-bottom: 14px; }
+.intro p { font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 56ch; margin: 0; }
+.intro-pts { margin: 0; padding: 0; list-style: none; }
+.intro-pts li { padding: 11px 0 11px 26px; border-bottom: 1px solid var(--line); font-size: 15px; position: relative; }
+.intro-pts li:first-child { border-top: 1px solid var(--line); }
+.intro-pts li::before { content: ""; position: absolute; left: 4px; top: 17px; width: 7px; height: 12px; border: solid var(--acc-text); border-width: 0 2px 2px 0; transform: rotate(40deg) scale(.8); }
+@media (max-width: 850px) { .intro-grid { grid-template-columns: 1fr; gap: 24px; } .intro { padding-top: 40px; } }
+
+/* ---------- werk (cases): een rustige lijst, geen rij gelijke kaarten ---------- */
+.werk .section-heading { margin-bottom: 36px; }
+.cases { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.case { display: grid; grid-template-columns: minmax(220px, 300px) minmax(0, 1fr); gap: 20px 48px; align-items: start; padding: 30px 0; border-bottom: 1px solid var(--line); }
+/* alle logo's op dezelfde lichte plaat, in licht en donker: de logo's zijn onbewerkt en zwart of kleurig, en lezen alleen goed op een lichte ondergrond */
+.case-logo { color-scheme: light; display: flex; align-items: center; justify-content: center; height: 132px; padding: 18px 24px; background: #ffffff; border: 1px solid #d9dfea; border-radius: 3px; }
+[data-theme="dark"] .case-logo { background: #f4f6fb; border-color: #f4f6fb; }
+.case-logo img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+#case-zm .case-logo img { max-height: 108px; }
+#case-vekemans .case-logo img { max-height: 76px; }
+#case-la-mia .case-logo img { max-height: 92px; transform: scale(1.55); }  /* het bestand heeft veel witruimte rond het merk; alleen de weergave wordt vergroot, het bestand blijft onbewerkt */
+.case-kenmerk { font-size: 13px; font-weight: 600; color: var(--acc-text); margin: 0 0 6px; }
+.case h3 { font-size: clamp(24px, 2.6vw, 34px); letter-spacing: -1.2px; line-height: 1.12; margin: 0 0 10px; font-weight: 500; }
+.case-tekst p { margin: 0; font-size: 16px; line-height: 1.65; color: var(--muted); max-width: 58ch; }
+.case-volgende { grid-template-columns: 1fr; padding: 26px 0 30px; }
+.case-volgende h3 { font-size: 22px; letter-spacing: -.6px; }
+.case-volgende a { color: var(--ink); font-weight: 600; border-bottom: 1px solid #a8b4cb; margin-left: 6px; }
+.case-volgende a:hover { color: var(--acc-text); border-bottom-color: var(--blue); }
+@media (max-width: 850px) { .case { grid-template-columns: 1fr; gap: 18px; padding: 26px 0; } .case-logo { height: 116px; max-width: 360px; } }
+
+/* ---------- verkenner: alleen op klik ---------- */
+.ex-tabs button::after { display: none !important; }
+/* ---------- contact ---------- */
+.contact-adres { margin: 22px 0 0 !important; font-size: 14px !important; color: #c0cadd; }
+.contact-cal { margin-top: 14px; display: inline-block; color: #fff; font-size: 14px; border-bottom: 1px solid #62718e; padding-bottom: 4px; }
+.contact-cal:hover { border-bottom-color: #fff; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-privacy { font-size: 12px !important; line-height: 1.6; color: #aab9d4; margin: 14px 0 0; }
+.form-privacy a, .form-note a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.form-acts { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 16px; }
+.form-acts .button { width: auto; margin-top: 0; }
+.form-acts .copy-message { background: transparent; color: #fff; border: 1px solid #62718e; }
+.form-acts .copy-message:hover { background: #fff; color: var(--navy); }
+.form-acts .mailapp { color: #fff; font-size: 13px; border-bottom: 1px solid #62718e; padding-bottom: 3px; }
+.form-acts .mailapp:hover { border-bottom-color: #fff; }
+.form-note { font-size: 12px !important; line-height: 1.6; color: #aab9d4; margin-top: 12px; }
+.form-status { min-height: 1.4em; margin-top: 10px; font-size: 13px; color: #dfe7f8; }
+.form-status[data-kind="error"] { color: #ffc2b8; }
+.form-status[data-kind="success"] { color: #a8f0cf; }
+form input[type="email"] { background: #1d2d4b; border: 1px solid #4a5b7a; color: #fff; padding: 12px 13px; border-radius: 3px; width: 100%; font-size: 13px; }
+form input::placeholder { color: #a0afc9; }
+
+/* ---------- voet ---------- */
+.foot-grid { grid-template-columns: 1.2fr 1fr 1fr 1fr; gap: 44px; }
+.foot-grid .kbo { font-size: 13px; }
+.foot-legal p { max-width: 110ch; }
+.foot-legal .pending { color: var(--muted); }
+@media (max-width: 1100px) { .foot-grid { grid-template-columns: 1fr 1fr; } .foot-grid > div:first-child { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .foot-grid { grid-template-columns: 1fr; } }
+
+/* ---------- conceptpagina's (bedrijfsgegevens, privacy, cookies) ---------- */
+.info { max-width: 820px; padding: 8px 0 80px; }
+.info h1 { font-size: clamp(38px, 5vw, 64px); line-height: 1.04; letter-spacing: -2.4px; margin: 26px 0 22px; }
+.info h2 { font-size: 22px; letter-spacing: -.5px; margin: 38px 0 10px; }
+.info p, .info li { font-size: 16px; line-height: 1.7; max-width: 66ch; }
+.info ul { padding-left: 1.2em; }
+.concept { margin: 0 0 8px; padding: 16px 20px; border: 1px solid #b6791a; border-left-width: 4px; background: #fff7e6; color: #5c3b00; border-radius: 3px; font-size: 15px; line-height: 1.55; }
+.concept strong { color: #3f2800; }
+[data-theme="dark"] .concept { background: #2b2210; border-color: #b6791a; color: #f3d9a4; }
+[data-theme="dark"] .concept strong { color: #ffe6b0; }
+.nog { background: #fff1c2; color: #4a3300; padding: 0 5px; border-radius: 2px; }
+[data-theme="dark"] .nog { background: #4a3a12; color: #f6dca0; }
+.info dl { margin: 0; border-top: 1px solid var(--line); }
+.info dl div { display: grid; grid-template-columns: 11em minmax(0, 1fr); gap: 20px; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+.info dt { color: var(--muted); }
+.info dd { margin: 0; }
+@media (max-width: 560px) { .info dl div { grid-template-columns: 1fr; gap: 2px; } }
+
+/* ---------- 35: compacte cases: probleem, wat we bouwden, resultaat; zonder kopjes ---------- */
+.case { align-items: center; }
+.case-regels { margin-top: 14px; }
+.case-regels p { margin: 0 0 8px; font-size: 16px; line-height: 1.6; color: var(--muted); max-width: 62ch; }
+.case-regels p.case-resultaat { margin: 14px 0 0; padding-left: 14px; border-left: 3px solid var(--blue); color: var(--ink); font-weight: 600; }
+
+/* ---------- 37: informatiepagina's met tabel, zonder conceptmarkeringen ---------- */
+.info h2 { margin-top: 30px; }
+.info .bijgewerkt { margin-top: 28px; font-size: 14px; color: var(--muted); }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.info.breed { max-width: 1040px; }
+.tabel-wrap { margin: 16px 0 20px; border: 1px solid var(--line); border-radius: 3px; overflow: hidden; }
+.tabel-wrap table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.55; }
+.tabel-wrap th, .tabel-wrap td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--line); color: var(--muted); }
+.tabel-wrap thead th { font-size: 13px; font-weight: 600; color: var(--ink); }
+.tabel-wrap tbody th { font-weight: 600; color: var(--ink); width: 19%; }
+.tabel-wrap tr:last-child th, .tabel-wrap tr:last-child td { border-bottom: 0; }
+@media (max-width: 850px) {
+  .tabel-wrap table, .tabel-wrap tbody, .tabel-wrap tr, .tabel-wrap th, .tabel-wrap td { display: block; width: auto; }
+  .tabel-wrap thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .tabel-wrap tbody tr { padding: 14px 14px 6px; border-bottom: 1px solid var(--line); }
+  .tabel-wrap tr:last-child { border-bottom: 0; }
+  .tabel-wrap th, .tabel-wrap td { padding: 0 0 10px; border: 0; }
+  .tabel-wrap tbody th { width: auto; font-size: 16px; }
+  .tabel-wrap td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; color: var(--ink); margin-bottom: 1px; }
+}

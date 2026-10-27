@@ -1,0 +1,138 @@
+/* W3b: aanvullingen op de ChatGPT-site (styles.css en themes.css blijven ongewijzigd): dienstpagina's, voorbeeldpagina, voet met bedrijfsgegevens, vaste knop.
+   Kleuren komen uit dezelfde variabelen als de rest (--navy, --blue, --paper, --ink, --muted, --line, --pale), dus licht en donker werken vanzelf. */
+:root { --acc-text: var(--blue); --on-navy: #c0cadd; }
+[data-theme="dark"] { --acc-text: #86a2ff; }
+
+/* extra links op de startpagina */
+.service-body a.more { margin-left: 22px; border-bottom-color: var(--blue); color: var(--acc-text); }
+[data-theme="dark"] .service-body a.more { border-bottom-color: #86a2ff; }
+.service-body .links { display: flex; flex-wrap: wrap; align-items: baseline; }
+.more-demo { margin: 34px 0 0; font-size: 14px; font-weight: 600; }
+.more-demo a { color: var(--ink); border-bottom: 1px solid var(--blue); padding-bottom: 5px; }
+.more-demo a:hover { color: var(--acc-text); }
+.more-demo span { margin-left: 12px; }
+
+/* kruimelpad en paginakop */
+.crumb { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding-top: 34px; font-size: 12px; color: var(--muted); }
+.crumb a { color: var(--ink); border-bottom: 1px solid var(--line); }
+.crumb a:hover { color: var(--acc-text); border-bottom-color: var(--blue); }
+.crumb i { font-style: normal; color: var(--muted); }
+.page-head { padding: 28px 0 60px; border-bottom: 1px solid var(--line); }
+.page-head .eyebrow { color: var(--acc-text); margin-bottom: 26px; }
+.page-head h1 { font-size: clamp(40px, 5.4vw, 80px); line-height: 1.04; letter-spacing: -3px; max-width: 16ch; }
+.page-head .lead { margin-top: 30px; font-size: clamp(18px, 1.7vw, 22px); line-height: 1.5; letter-spacing: -.3px; max-width: 46ch; }
+.page-head .actions { display: flex; flex-wrap: wrap; gap: 14px 26px; align-items: center; margin-top: 36px; }
+.page-head .alt { font-size: 14px; color: var(--muted); }
+.page-head .alt a { color: var(--ink); border-bottom: 1px solid var(--line); }
+.page-head .alt a:hover { color: var(--acc-text); border-bottom-color: var(--blue); }
+
+/* inhoud van een dienst */
+.detail { display: grid; grid-template-columns: 1.2fr .8fr; gap: 90px; padding: 80px 0; }
+.detail h2 { font-size: clamp(26px, 2.6vw, 36px); letter-spacing: -1.2px; margin-bottom: 30px; }
+.detail .eyebrow { color: var(--acc-text); margin-bottom: 18px; }
+.detail .text p { font-size: 17px; line-height: 1.65; max-width: 52ch; padding: 20px 0; border-top: 1px solid var(--line); }
+.detail .text p:last-child { border-bottom: 1px solid var(--line); }
+.detail ul.arrow { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.detail ul.arrow li { padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 15px; line-height: 1.5; color: var(--ink); }
+.detail ul.arrow li:before { content: '↳'; padding-right: 12px; color: var(--acc-text); }
+.ai-note { margin: 0 0 80px; padding: 34px 38px; background: var(--pale); border-left: 3px solid var(--blue); border-radius: 4px; max-width: 880px; }
+.ai-note h3 { font-size: 22px; margin-bottom: 12px; }
+.ai-note p { font-size: 16px; line-height: 1.65; color: var(--ink); }
+.related { padding: 0 0 70px; }
+.related h2 { font-size: 24px; letter-spacing: -.8px; margin-bottom: 22px; }
+.related ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.related li a { display: block; height: 100%; padding: 18px 20px; border: 1px solid var(--line); border-radius: 6px; font-size: 14px; line-height: 1.5; color: var(--muted); }
+.related li a:hover { border-color: var(--blue); }
+.related li strong { display: block; color: var(--ink); font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+.related li a:hover strong { color: var(--acc-text); }
+.pager { display: flex; justify-content: space-between; gap: 20px; padding: 26px 0 80px; border-top: 1px solid var(--line); font-size: 13px; font-weight: 600; }
+.pager a { color: var(--ink); border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.pager a:hover { color: var(--acc-text); border-bottom-color: var(--blue); }
+
+/* band met contact onderaan de pagina's */
+.cta-band { background: var(--navy); color: #fff; padding: 76px 0; }
+.cta-band .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 70px; align-items: end; }
+.cta-band h2 { font-size: clamp(34px, 4vw, 56px); letter-spacing: -2.4px; line-height: 1.06; }
+.cta-band h2 span { color: #9ab2ff; }
+.cta-band p { margin-top: 18px; color: var(--on-navy); max-width: 40ch; }
+.cta-band .acts { display: flex; flex-direction: column; gap: 12px; }
+.cta-band .acts a { display: flex; justify-content: space-between; gap: 20px; padding: 16px 20px; border: 1px solid #62718e; border-radius: 4px; font-size: 15px; font-weight: 600; }
+.cta-band .acts a:hover { background: #fff; color: var(--navy); }
+.cta-band .acts a.main { background: var(--blue); border-color: var(--blue); }
+.cta-band .acts a.main:hover { background: #234fdf; color: #fff; }
+
+/* voorbeeldpagina */
+.pf-frame-wrap { padding: 0 0 70px; }
+.pf-frame { display: block; width: 100%; min-height: 640px; border: 0; border-radius: 8px; background: #eaf0fc; }
+.pf-note { margin: 16px 0 0; font-size: 13px; color: var(--muted); }
+
+/* voet met bedrijfsgegevens */
+.site-foot { border-top: 1px solid var(--line); padding: 64px 0 120px; font-size: 14px; color: var(--muted); }
+.foot-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 60px; }
+.foot-grid .brand { width: 195px; margin-bottom: 20px; }
+.foot-grid p { line-height: 1.65; margin: 0 0 10px; max-width: 42ch; }
+.foot-grid .tag { font-size: 16px; color: var(--ink); letter-spacing: -.3px; }
+.foot-grid h3 { font-size: 11px; font-weight: 600; letter-spacing: 1.7px; text-transform: uppercase; color: var(--acc-text); margin-bottom: 18px; }
+.foot-grid ul { margin: 0; padding: 0; list-style: none; line-height: 2; }
+.foot-grid a { color: var(--ink); border-bottom: 1px solid var(--line); }
+.foot-grid a:hover { color: var(--acc-text); border-bottom-color: var(--blue); }
+.foot-legal { margin-top: 48px; padding-top: 26px; border-top: 1px solid var(--line); font-size: 12px; line-height: 1.7; }
+.foot-legal p { margin: 0 0 8px; max-width: 110ch; }
+.foot-legal .pending { color: var(--muted); }
+
+/* vaste knop met gsm en e-mail */
+.dock { position: fixed; left: 22px; bottom: 20px; z-index: 19; display: flex; gap: 6px; padding: 6px; background: var(--navy); border-radius: 10px; box-shadow: 0 8px 30px #0003; }
+[data-theme="dark"] .dock { border: 1px solid #344663; }
+.dock a { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 16px; border-radius: 6px; font-size: 13px; font-weight: 600; color: #fff; white-space: nowrap; }
+.dock a:hover { background: #243757; }
+.dock a.main { background: var(--blue); }
+.dock a.main:hover { background: #234fdf; }
+.dock .short { display: none; }
+@media (max-width: 1150px) {
+  .detail { gap: 50px; }
+  .cta-band .wrap { gap: 40px; }
+}
+@media (max-width: 850px) {
+  .detail { grid-template-columns: 1fr; gap: 50px; padding: 56px 0; }
+  .cta-band .wrap { grid-template-columns: 1fr; }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .foot-grid > div:first-child { grid-column: 1 / -1; }
+  .page-head h1 { letter-spacing: -2px; max-width: none; }
+  .service-body a.more { margin-left: 0; display: block; width: fit-content; }
+}
+@media (max-width: 800px) {
+  .dock { left: 10px; right: 10px; bottom: 10px; }
+  .dock a { flex: 1 1 0; padding: 0 8px; font-size: 13px; }
+  .dock .long { display: none; }
+  .dock .short { display: inline; }
+  .theme-switch { bottom: 76px !important; right: 10px !important; }
+  .site-foot { padding-bottom: 150px; }
+}
+@media (max-width: 560px) {
+  .page-head { padding-bottom: 44px; }
+  .ai-note { padding: 26px 22px; }
+  .cta-band { padding: 56px 0; }
+  .foot-grid { grid-template-columns: 1fr; }
+  .pager { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) { .dock a { transition: none; } }
+
+/* contrast: drie plekken in de oorspronkelijke ChatGPT-stijl haalden 4,5:1 niet (gemeten met _build/w3b-check.mjs) */
+.core small { color: #fff; white-space: nowrap; }
+.number { color: #5b6578; }
+.possibilities .eyebrow { color: #2a52e0; }
+.example-number { color: #4a5878; }
+.example-options button[aria-selected="true"] { color: #2a52e0; }
+.demo-app-heading small { color: #4a5878; }
+.avatar, .file-icon, .flow-step > span { color: #2a52e0; }
+.demo-row small, .flow-step small, .demo-stats small, .chart-note, .demo-notice, .demo-caption { color: #4a5878; }
+[data-theme="dark"] .chart small { color: #fff; }
+[data-theme="dark"] .chart > div { background: #3a5a99; }
+[data-theme="dark"] .chart > div:last-child { background: #2f55d4; }
+.chart small { color: #14213d; }
+.chart > div:last-child small { color: #fff; }
+
+/* W3c */
+.pf-bar2 { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin: 0 0 18px; }
+.pf-now { margin: 0; font-size: 14px; color: var(--muted); max-width: none; }
+.pf-now strong { color: var(--ink); }
