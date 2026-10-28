@@ -21,7 +21,7 @@ document.addEventListener('keydown', event => {
 window.matchMedia('(min-width: 851px)').addEventListener('change', closeMenu);
 
 const demoContent = document.querySelector('#demo-content');
-const portalDemo = demoContent.innerHTML;
+const portalDemo = demoContent ? demoContent.innerHTML : '';
 const demos = {
   portal: portalDemo,
   flow: `<div class="demo-app-heading"><div><small>SLIMME WORKFLOW</small><h3>Eén aanvraag. Alles in gang.</h3></div><span class="avatar">⇄</span></div>
@@ -58,8 +58,9 @@ tabs.forEach((tab, index) => {
   });
 });
 
+const interestVeld = document.querySelector('#interest');
 document.querySelectorAll('[data-interest]').forEach(link => {
-  link.addEventListener('click', () => {
-    document.querySelector('#interest').value = link.dataset.interest;
-  });
+  if (interestVeld) link.addEventListener('click', () => { interestVeld.value = link.dataset.interest; });
+  else link.href = 'index.html?interesse=' + encodeURIComponent(link.dataset.interest) + '#contact';
 });
+if (interestVeld) { const gekozen = new URLSearchParams(location.search).get('interesse'); if (gekozen) interestVeld.value = gekozen; }

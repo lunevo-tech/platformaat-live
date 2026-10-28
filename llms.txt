@@ -27,7 +27,13 @@ Bedrijfsgegevens: PlatforMaat is een eenmanszaak (handelsnaam), ondernemingsnumm
 ## Per sector
 - [Overzicht van sectoren](https://platformaat.be/sectoren.html)
 
+## Overzicht
+- [Wat we maken](https://platformaat.be/diensten.html)
+- [Ons werk](https://platformaat.be/werk.html)
+- [Prijzen](https://platformaat.be/prijzen.html)
+- [Werkwijze](https://platformaat.be/werkwijze.html)
+
 ## Optioneel
 - [Bedrijfsgegevens](https://platformaat.be/bedrijfsgegevens.html)
 - [Privacy](https://platformaat.be/privacy.html)
-Prijzen: vanafprijzen per pakket staan op de startpagina (exclusief btw); de definitieve prijs is een vaste prijs in de offerte.
+Prijzen: vanafprijzen per pakket staan op de pagina Prijzen (exclusief btw); de definitieve prijs is een vaste prijs in de offerte.

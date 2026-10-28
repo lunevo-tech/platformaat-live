@@ -189,3 +189,31 @@ form input::placeholder { color: #a0afc9; }
 .prijs-kaart li::before { content: ""; position: absolute; left: 0; top: 15px; width: 8px; height: 1px; background: currentColor; }
 .prijs-hosting { margin: 28px 0 0; font-size: 16px; line-height: 1.6; max-width: 70ch; }
 @media (max-width: 850px) { .prijs-grid { grid-template-columns: 1fr; gap: 16px; } }
+
+/* ---------- 44: menu met actieve pagina, paginakop, tegels, werk-teaser, prijsband ---------- */
+.header nav a[aria-current="page"] { font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 8px; text-decoration-color: var(--blue); }
+.pagehead { padding-top: 6px; padding-bottom: 6px; }
+.pagehead h1 { margin: 22px 0 14px; font-size: clamp(38px, 5.4vw, 74px); font-weight: 400; letter-spacing: -.035em; line-height: 1.02; }
+.pagehead .lead { margin: 0; max-width: 62ch; font-size: clamp(17px, 1.5vw, 20px); line-height: 1.55; }
+.pagina-cta .cta-blok { max-width: none; }
+.werk-meer { padding-top: 0; }
+.tegel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.tegel { position: relative; display: flex; flex-direction: column; gap: 10px; min-height: 230px; padding: 30px 30px 26px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); transition: border-color .2s, transform .2s; }
+.tegel:hover { border-color: var(--blue); transform: translateY(-2px); }
+.tegel-kicker { font-size: 14px; color: var(--muted); }
+.tegel-titel { font-size: clamp(24px, 2.6vw, 34px); line-height: 1.15; letter-spacing: -.02em; }
+.tegel-tekst { font-size: 16px; line-height: 1.55; max-width: 44ch; }
+.tegel-pijl { position: absolute; right: 28px; bottom: 22px; font-size: 26px; color: var(--blue); }
+.werk-rij { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin: 0; padding: 0; list-style: none; }
+.werk-rij a { display: flex; flex-direction: column; gap: 8px; height: 100%; padding: 22px; border: 1px solid var(--line); border-radius: 8px; line-height: 1.5; }
+.werk-rij a:hover { border-color: var(--blue); }
+.werk-rij .case-logo { display: flex; align-items: center; justify-content: flex-start; min-height: 64px; margin-bottom: 6px; }
+.werk-rij .case-logo img { max-height: 56px; max-width: 80%; width: auto; }
+.werk-rij strong { font-size: 20px; font-weight: 500; line-height: 1.25; }
+.werk-teaser .more-demo { margin-top: 26px; }
+.prijs-band { padding-top: 10px; }
+.prijsband-titel { margin: 0 0 14px; font-size: clamp(30px, 4.4vw, 60px); font-weight: 400; letter-spacing: -.03em; line-height: 1.08; }
+.prijsband-titel strong { font-weight: 500; }
+.prijs-band p { margin: 0; font-size: 17px; }
+.prijs-band p a { border-bottom: 1px solid var(--blue); }
+@media (max-width: 850px) { .tegel-grid, .werk-rij { grid-template-columns: 1fr; gap: 16px; } .tegel { min-height: 0; } }
