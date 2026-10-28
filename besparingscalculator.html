@@ -12,6 +12,11 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://platformaat.be/besparingscalculator.html">
   <meta property="og:locale" content="nl_BE">
+  <meta property="og:image" content="https://platformaat.be/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PlatforMaat: Jouw platform. Op jouw maat.">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Besparingscalculator: wat kost handwerk je per jaar? | PlatforMaat</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -20,7 +25,7 @@
   <link rel="stylesheet" href="pages.css?v=9">
   <link rel="stylesheet" href="scenes.css?v=9">
   <link rel="stylesheet" href="rustig.css?v=4">
-  <link rel="stylesheet" href="werk.css?v=13">
+  <link rel="stylesheet" href="werk.css?v=15">
   <script src="theme-init.js?v=1"></script>
   <script src="pages.js?v=9" defer></script>
   <script src="theme30.js?v=1" defer></script>
@@ -48,7 +53,7 @@
       <div class="calc-rij"><label for="c-keer">Hoe vaak per week doe je deze taak?</label><input id="c-keer" type="number" inputmode="decimal" min="0" step="any" value="10"></div>
       <div class="calc-rij"><label for="c-min">Hoeveel minuten duurt dat telkens?</label><input id="c-min" type="number" inputmode="decimal" min="0" step="any" value="15"></div>
       <div class="calc-rij"><label for="c-uur">Wat kost een uur van die persoon? (€ per uur, intern tarief)</label><input id="c-uur" type="number" inputmode="decimal" min="0" step="any" value="40"></div>
-      <div class="calc-rij"><label for="c-weken">Hoeveel weken per jaar werk je eraan?</label><input id="c-weken" type="number" inputmode="decimal" min="0" max="52" step="any" value="46"></div>
+      <div class="calc-rij"><label for="c-weken">Hoeveel weken per jaar werk je eraan?</label><input id="c-weken" type="number" inputmode="decimal" min="0" max="52" step="any" value="46" aria-describedby="calc-uitleg"></div>
       <div class="calc-rij"><label for="c-pct">Hoeveel procent denk je te kunnen uitsparen? (jouw schatting)</label><input id="c-pct" type="number" inputmode="decimal" min="0" max="100" step="any" value="50"></div>
     </form>
     <div id="calc-uitkomst" class="calc-uitkomst" role="status" aria-live="polite"></div>
@@ -89,7 +94,7 @@
     </nav>
   </div>
   <div class="wrap foot-legal">
-    <p>PlatforMaat, handelsnaam van Rayane Errami · Ondernemingsnummer 1004.326.518 · btw BE 1004.326.518 · Meetjeslandstraat 44, 2660 Antwerpen</p>
+    <p>PlatforMaat · Ondernemingsnummer 1004.326.518 · btw BE 1004.326.518 · Meetjeslandstraat 44, 2660 Antwerpen</p>
   </div>
 </footer>
 <noscript><style>.theme30{display:none}</style></noscript>
@@ -105,13 +110,15 @@
   var fmt = function (n, d) { return n.toLocaleString('nl-BE', { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); };
   var uit = document.getElementById('calc-uitkomst');
   function reken() {
-    var keer = v('c-keer'), min = v('c-min'), uur = v('c-uur'), weken = v('c-weken'), pct = Math.min(100, v('c-pct'));
+    var keer = v('c-keer'), min = v('c-min'), uur = v('c-uur'), weken = v('c-weken'), pct = v('c-pct'), nota = [];
+    if (weken > 52) { weken = 52; nota.push('Een jaar heeft 52 weken; we rekenen met 52 in plaats van wat je invulde.'); }
+    if (pct > 100) { pct = 100; nota.push('Meer dan 100% uitsparen kan niet; we rekenen met 100%.'); }
     var urenJaar = keer * min / 60 * weken, eurJaar = urenJaar * uur;
     var spaarUren = urenJaar * pct / 100, spaarEur = eurJaar * pct / 100;
     if (!keer || !min) { uit.innerHTML = '<p>Vul hierboven in hoe vaak je dit doet en hoe lang het duurt; dan zie je de uitkomst.</p>'; return; }
     uit.innerHTML = '<p>Dit werk kost je ongeveer <strong>' + fmt(urenJaar, 1) + ' uur per jaar</strong>, of <strong>€ ' + fmt(eurJaar) + '</strong> aan intern tarief.</p>' +
       '<p>Als je ' + fmt(pct) + '% daarvan kunt uitsparen (jouw schatting), is dat <strong>' + fmt(spaarUren, 1) + ' uur</strong> of <strong>€ ' + fmt(spaarEur) + '</strong> per jaar.</p>' +
-      '<p class="calc-noot">Dit is een rekensom met jouw eigen cijfers, geen belofte van een resultaat. Wat een oplossing kost, hangt af van je situatie; je krijgt een vaste prijs in een offerte op maat.</p>';
+      nota.map(function (n) { return '<p class="calc-noot">' + n + '</p>'; }).join('') + '<p class="calc-noot">Dit is een rekensom met jouw eigen cijfers, geen belofte van een resultaat. Vrijgekomen tijd is niet automatisch een lagere uitgave: pas als die tijd anders wordt gebruikt of loonkost werkelijk daalt, merk je het in je rekening. Wat een oplossing kost, hangt af van je situatie; je krijgt een vaste prijs in een offerte op maat.</p>';
     window.__calc = 'Berekening: ' + keer + ' keer per week, ' + min + ' minuten per keer, € ' + uur + ' per uur, ' + weken + ' weken per jaar = ' + fmt(urenJaar, 1) + ' uur en € ' + fmt(eurJaar) + ' per jaar; ' + fmt(pct) + '% uitsparen = ' + fmt(spaarUren, 1) + ' uur en € ' + fmt(spaarEur) + '.';
   }
   ['c-keer', 'c-min', 'c-uur', 'c-weken', 'c-pct'].forEach(function (id) { document.getElementById(id).addEventListener('input', reken); });

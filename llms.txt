@@ -1,6 +1,6 @@
 # PlatforMaat
 
-> PlatforMaat bouwt software op maat, websites, koppelingen en AI-toepassingen voor kleine en middelgrote bedrijven in België. Gevestigd in Antwerpen (Hoboken). Vaste prijs in een offerte op maat; gegevens van de klant zijn exporteerbaar en bij klantspecifiek maatwerk gaat de code over naar de klant; hosting in de EU met verwerkersovereenkomst.
+> PlatforMaat bouwt software op maat, websites, koppelingen en AI-toepassingen voor kleine en middelgrote bedrijven in België. Gevestigd in Antwerpen (Hoboken). Vaste prijs in een offerte op maat; gegevens van de klant zijn exporteerbaar en bij klantspecifiek maatwerk gaat de code over naar de klant; hosting in de EU met verwerkersovereenkomst (provider en regio staan in de offerte).
 
 Bedrijfsgegevens: PlatforMaat is een eenmanszaak (handelsnaam), ondernemingsnummer en btw-nummer BE 1004.326.518, Meetjeslandstraat 44, 2660 Antwerpen. Contact: info@platformaat.be.
 
@@ -30,3 +30,4 @@ Bedrijfsgegevens: PlatforMaat is een eenmanszaak (handelsnaam), ondernemingsnumm
 ## Optioneel
 - [Bedrijfsgegevens](https://platformaat.be/bedrijfsgegevens.html)
 - [Privacy](https://platformaat.be/privacy.html)
+Prijzen: vanafprijzen per pakket staan op de startpagina (exclusief btw); de definitieve prijs is een vaste prijs in de offerte.
