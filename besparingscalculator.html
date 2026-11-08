@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Bereken hoeveel uur en euro een terugkerende taak, zoals offertes opmaken of gegevens overtikken, je per jaar kost. Je vult je eigen cijfers in; er wordt niets verstuurd of bewaard.">
+  <meta name="description" content="Bereken wat een taak die steeds terugkomt, zoals offertes opmaken of gegevens overtikken, je op een jaar kost aan uren en euro. Je vult je eigen cijfers in en er wordt niets verstuurd of bewaard.">
   <meta name="theme-color" content="#14213d">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://platformaat.be/besparingscalculator.html">
   <meta property="og:title" content="Besparingscalculator: wat kost handwerk je per jaar? | PlatforMaat">
-  <meta property="og:description" content="Bereken hoeveel uur en euro een terugkerende taak, zoals offertes opmaken of gegevens overtikken, je per jaar kost. Je vult je eigen cijfers in; er wordt niets verstuurd of bewaard.">
+  <meta property="og:description" content="Bereken wat een taak die steeds terugkomt, zoals offertes opmaken of gegevens overtikken, je op een jaar kost aan uren en euro. Je vult je eigen cijfers in en er wordt niets verstuurd of bewaard.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://platformaat.be/besparingscalculator.html">
   <meta property="og:locale" content="nl_BE">
@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="pages.css?v=9">
   <link rel="stylesheet" href="scenes.css?v=9">
   <link rel="stylesheet" href="rustig.css?v=4">
-  <link rel="stylesheet" href="werk.css?v=16">
+  <link rel="stylesheet" href="werk.css?v=17">
   <script src="theme-init.js?v=1"></script>
   <script src="pages.js?v=9" defer></script>
   <script src="theme30.js?v=1" defer></script>
@@ -47,21 +47,21 @@
   <div class="wrap">
     <nav class="crumb" aria-label="Kruimelpad"><a href="index.html">Home</a><i aria-hidden="true">/</i><a href="kennis.html">Kennis</a><i aria-hidden="true">/</i><span aria-current="page">Besparingscalculator</span></nav>
     <div class="info breed pagina"><h1>Besparingscalculator: wat kost handwerk je per jaar?</h1>
-    <p class="lead">Kies één terugkerende taak, bijvoorbeeld offertes opmaken, gegevens overtikken of rapporten samenstellen, en reken uit wat ze je jaarlijks kost. Je vult je eigen cijfers in. Er wordt niets verstuurd of bewaard.</p>
+    <p class="lead">Denk aan één taak die steeds terugkomt, zoals offertes opmaken, gegevens overtikken of rapporten samenstellen. Vul in hoe vaak je eraan werkt en hoe lang, en je ziet wat dat op een jaar kost. Alles blijft in je browser: er wordt niets verstuurd of bewaard.</p>
     <form class="calc" onsubmit="return false" aria-describedby="calc-uitleg">
-      <p id="calc-uitleg" class="calc-noot">Gebruik schattingen die je kunt verdedigen. De voorbeeldwaarden hieronder zijn alleen om te laten zien hoe het werkt; pas ze aan.</p>
-      <div class="calc-rij"><label for="c-keer">Hoe vaak per week doe je deze taak?</label><input id="c-keer" type="number" inputmode="decimal" min="0" step="any" value="10"></div>
-      <div class="calc-rij"><label for="c-min">Hoeveel minuten duurt dat telkens?</label><input id="c-min" type="number" inputmode="decimal" min="0" step="any" value="15"></div>
-      <div class="calc-rij"><label for="c-uur">Wat kost een uur van die persoon? (€ per uur, intern tarief)</label><input id="c-uur" type="number" inputmode="decimal" min="0" step="any" value="40"></div>
-      <div class="calc-rij"><label for="c-weken">Hoeveel weken per jaar werk je eraan?</label><input id="c-weken" type="number" inputmode="decimal" min="0" max="52" step="any" value="46" aria-describedby="calc-uitleg"></div>
-      <div class="calc-rij"><label for="c-pct">Hoeveel procent denk je te kunnen uitsparen? (jouw schatting)</label><input id="c-pct" type="number" inputmode="decimal" min="0" max="100" step="any" value="50"></div>
+      <p id="calc-uitleg" class="calc-noot">Reken met eerlijke schattingen, niet met wishful thinking. De getallen die al ingevuld staan zijn een voorbeeld; vervang ze door die van jou.</p>
+      <div class="calc-rij"><label for="c-keer">Hoe vaak doe je die taak per week?</label><input id="c-keer" type="number" inputmode="decimal" min="0" step="any" value="10"></div>
+      <div class="calc-rij"><label for="c-min">Hoeveel minuten kost dat telkens?</label><input id="c-min" type="number" inputmode="decimal" min="0" step="any" value="15"></div>
+      <div class="calc-rij"><label for="c-uur">Wat kost een uur werk van die persoon? (€ per uur, met loon en bijkomende kosten)</label><input id="c-uur" type="number" inputmode="decimal" min="0" step="any" value="40"></div>
+      <div class="calc-rij"><label for="c-weken">In hoeveel weken per jaar doe je dit?</label><input id="c-weken" type="number" inputmode="decimal" min="0" max="52" step="any" value="46" aria-describedby="calc-uitleg"></div>
+      <div class="calc-rij"><label for="c-pct">Hoeveel procent daarvan kun je volgens jou schrappen? (jouw inschatting)</label><input id="c-pct" type="number" inputmode="decimal" min="0" max="100" step="any" value="50"></div>
     </form>
     <div id="calc-uitkomst" class="calc-uitkomst" role="status" aria-live="polite"></div>
     <p><button type="button" id="calc-kopieer" class="calc-knop">Kopieer mijn berekening</button> <span id="calc-status" class="calc-noot" role="status"></span></p>
-    <h2>Wat kun je ermee doen?</h2>
-    <p>Een bedrag zegt nog niet of automatiseren loont: ook de kosten van een oplossing en de tijd om ze in te voeren tellen. Wil je het samen bekijken, plak dan je berekening in het contactformulier en vertel kort wat de taak inhoudt. We zeggen eerlijk of het de moeite is, ook als het antwoord «gebruik een standaardpakket» is.</p>
-    <p>Lees ook de gids over <a href="gids-offerte-automatiseren.html">offertes automatiseren</a> of <a href="gids-wat-kost-maatwerksoftware.html">wat maatwerksoftware kost</a>.</p>
-    <div class="cta-blok"><p>Vertel wat er in je zaak misloopt. We zeggen eerlijk of we kunnen helpen.</p><p><a class="cta-link" href="index.html#contact">Neem contact op</a> <a class="cta-link cta-link-2" href="faq.html">Veelgestelde vragen</a></p></div><p class="bijgewerkt">Laatst bijgewerkt: 27 oktober 2026.</p>
+    <h2>En dan?</h2>
+    <p>Een bedrag alleen zegt nog niet of automatiseren loont: de kosten van een oplossing en de tijd om ze in gebruik te nemen tellen ook mee. Wil je het samen bekijken? Plak je berekening in het contactformulier en vertel kort wat de taak inhoudt. We zeggen eerlijk of het de moeite is, ook als het antwoord is: gebruik een standaardpakket.</p>
+    <p>Meer lezen: de gids over <a href="gids-offerte-automatiseren.html">offertes automatiseren</a> of <a href="gids-wat-kost-maatwerksoftware.html">wat maatwerksoftware kost</a>.</p>
+    <div class="cta-blok"><p>Vertel wat er in je onderneming misloopt. We zeggen eerlijk of we kunnen helpen.</p><p><a class="cta-link" href="index.html#contact">Neem contact op</a> <a class="cta-link cta-link-2" href="faq.html">Veelgestelde vragen</a></p></div><p class="bijgewerkt">Laatst bijgewerkt: 27 oktober 2026.</p>
     </div>
   </div>
 </main>
@@ -70,7 +70,7 @@
     <div>
       <a class="brand" href="index.html" aria-label="PlatforMaat, naar de startpagina"><img class="brand-light" src="assets/logo.svg" width="2050" height="305" alt="PlatforMaat.be"><img class="brand-dark" src="assets/logo-dark.svg" width="2050" height="305" alt="PlatforMaat.be"></a>
       <p class="tag">Jouw platform. Op jouw maat.</p>
-      <p>Maatwerksoftware, apps, websites, AI, koppelingen, hosting en onderhoud voor kleine en middelgrote bedrijven.</p>
+      <p>Maatwerksoftware, apps, websites, AI, koppelingen, hosting en onderhoud voor kleine en middelgrote ondernemingen.</p>
     </div>
     <div>
       <h3>Contact</h3>
@@ -111,22 +111,22 @@
   var uit = document.getElementById('calc-uitkomst');
   function reken() {
     var keer = v('c-keer'), min = v('c-min'), uur = v('c-uur'), weken = v('c-weken'), pct = v('c-pct'), nota = [];
-    if (weken > 52) { weken = 52; nota.push('Een jaar heeft 52 weken; we rekenen met 52 in plaats van wat je invulde.'); }
-    if (pct > 100) { pct = 100; nota.push('Meer dan 100% uitsparen kan niet; we rekenen met 100%.'); }
+    if (weken > 52) { weken = 52; nota.push('Een jaar heeft 52 weken. We rekenen daarom met 52 in plaats van met wat je invulde.'); }
+    if (pct > 100) { pct = 100; nota.push('Meer dan 100% schrappen kan niet. We rekenen met 100%.'); }
     var urenJaar = keer * min / 60 * weken, eurJaar = urenJaar * uur;
     var spaarUren = urenJaar * pct / 100, spaarEur = eurJaar * pct / 100;
-    if (!keer || !min) { uit.innerHTML = '<p>Vul hierboven in hoe vaak je dit doet en hoe lang het duurt; dan zie je de uitkomst.</p>'; return; }
-    uit.innerHTML = '<p>Dit werk kost je ongeveer <strong>' + fmt(urenJaar, 1) + ' uur per jaar</strong>, of <strong>€ ' + fmt(eurJaar) + '</strong> aan intern tarief.</p>' +
-      '<p>Als je ' + fmt(pct) + '% daarvan kunt uitsparen (jouw schatting), is dat <strong>' + fmt(spaarUren, 1) + ' uur</strong> of <strong>€ ' + fmt(spaarEur) + '</strong> per jaar.</p>' +
-      nota.map(function (n) { return '<p class="calc-noot">' + n + '</p>'; }).join('') + '<p class="calc-noot">Dit is een rekensom met jouw eigen cijfers, geen belofte van een resultaat. Vrijgekomen tijd is niet automatisch een lagere uitgave: pas als die tijd anders wordt gebruikt of loonkost werkelijk daalt, merk je het in je rekening. Wat een oplossing kost, hangt af van je situatie; je krijgt een vaste prijs in een offerte op maat.</p>';
+    if (!keer || !min) { uit.innerHTML = '<p>Vul hierboven in hoe vaak je de taak doet en hoe lang ze duurt. Dan verschijnt hier de uitkomst.</p>'; return; }
+    uit.innerHTML = '<p>Deze taak kost je ongeveer <strong>' + fmt(urenJaar, 1) + ' uur per jaar</strong>. In geld is dat <strong>€ ' + fmt(eurJaar) + '</strong>.</p>' +
+      '<p>Kun je er ' + fmt(pct) + '% van schrappen, dan win je <strong>' + fmt(spaarUren, 1) + ' uur</strong> terug, of <strong>€ ' + fmt(spaarEur) + '</strong> per jaar.</p>' +
+      nota.map(function (n) { return '<p class="calc-noot">' + n + '</p>'; }).join('') + '<p class="calc-noot">Dit is een rekensom met jouw eigen cijfers, geen belofte. Vrijgekomen tijd is nog geen lagere uitgave: pas als je die tijd voor iets anders inzet of de loonkost echt daalt, zie je het in je rekening. Wat een oplossing kost, hangt af van je situatie. Je krijgt altijd een vaste prijs in een offerte.</p>';
     window.__calc = 'Berekening: ' + keer + ' keer per week, ' + min + ' minuten per keer, € ' + uur + ' per uur, ' + weken + ' weken per jaar = ' + fmt(urenJaar, 1) + ' uur en € ' + fmt(eurJaar) + ' per jaar; ' + fmt(pct) + '% uitsparen = ' + fmt(spaarUren, 1) + ' uur en € ' + fmt(spaarEur) + '.';
   }
   ['c-keer', 'c-min', 'c-uur', 'c-weken', 'c-pct'].forEach(function (id) { document.getElementById(id).addEventListener('input', reken); });
   var k = document.getElementById('calc-kopieer'), s = document.getElementById('calc-status');
   k.addEventListener('click', function () {
-    if (!window.__calc) { s.textContent = 'Vul eerst de berekening in.'; return; }
-    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(window.__calc).then(function () { s.textContent = 'Gekopieerd. Plak het in het contactformulier als je het wilt bespreken.'; }, function () { s.textContent = 'Kopiëren lukt niet; selecteer de tekst zelf.'; });
-    else s.textContent = 'Kopiëren is niet beschikbaar in deze browser.';
+    if (!window.__calc) { s.textContent = 'Vul eerst de berekening in, dan kun je ze kopiëren.'; return; }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(window.__calc).then(function () { s.textContent = 'Gekopieerd. Plak de berekening in het contactformulier als je ze wilt bespreken.'; }, function () { s.textContent = 'Kopiëren lukt niet. Selecteer de tekst zelf en kopieer ze.'; });
+    else s.textContent = 'Kopiëren werkt niet in deze browser.';
   });
   reken();
 })();</script>

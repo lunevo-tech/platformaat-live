@@ -217,3 +217,37 @@ form input::placeholder { color: #a0afc9; }
 .prijs-band p { margin: 0; font-size: 17px; }
 .prijs-band p a { border-bottom: 1px solid var(--blue); }
 @media (max-width: 850px) { .tegel-grid, .werk-rij { grid-template-columns: 1fr; gap: 16px; } .tegel { min-height: 0; } }
+
+/* ---------- 46: kleur in de tekstpagina's (nachtblauw en kobalt, vlak) ---------- */
+:root { --cta-bg: #14213d; --cta-tekst: #f1f5ff; --cta-lijn: #6f8ffb; --intro-bg: #eaf0ff; --kop-streep: #3563ff; --tabel-kop: #eaf0ff; }
+:root[data-theme="dark"] { --cta-bg: #1a2948; --cta-tekst: #eef2fc; --cta-lijn: #6488ff; --intro-bg: #14213d; --kop-streep: #6488ff; --tabel-kop: #14213d; }
+/* inleidende zin: een vlak met kobalte rand in plaats van losse tekst */
+.pagina .lead { padding: 20px 24px; background: var(--intro-bg); border-left: 4px solid var(--kop-streep); border-radius: 0 6px 6px 0; max-width: 66ch; }
+/* kopjes met een kleine kobalte streep */
+.info h2 { position: relative; padding-left: 16px; }
+.info h2::before { content: ""; position: absolute; left: 0; top: .2em; bottom: .2em; width: 4px; border-radius: 2px; background: var(--kop-streep); }
+.info h3 { color: var(--ink); }
+.pagina h3 { padding-bottom: 2px; border-bottom: 2px solid var(--intro-bg); display: inline-block; }
+/* lijsten en links in huisstijlkleur */
+.info ul:not(.verwant) li::marker { color: var(--kop-streep); }
+.info p a:not(.cta-link), .info li > a:not(.cta-link) { color: var(--acc-text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.info strong { color: var(--ink); box-shadow: inset 0 -.45em 0 var(--intro-bg); }
+/* overzichtslijsten als vlakken */
+.pagina .verwant { border-top: 0; display: grid; gap: 12px; }
+.pagina .verwant li { padding: 16px 20px; border: 1px solid var(--line); border-left: 4px solid var(--kop-streep); border-radius: 0 6px 6px 0; background: var(--paper); }
+.pagina .verwant li:hover { background: var(--intro-bg); }
+/* afsluitblok in nachtblauw */
+.cta-blok { background: var(--cta-bg); color: var(--cta-tekst); border: 0; border-left: 4px solid var(--cta-lijn); border-radius: 0 6px 6px 0; padding: 26px 28px; }
+.cta-blok .cta-link { color: #fff; border-bottom-color: var(--cta-lijn); }
+.cta-blok .cta-link-2 { color: var(--cta-tekst); border-bottom-color: #8da0c8; }
+.cta-blok .cta-link:focus-visible { outline-color: #9ab2ff !important; }
+/* tabellen en definitielijsten (bedrijfsgegevens, cookies) */
+.info table th { background: var(--tabel-kop); color: var(--ink); }
+.info dt { color: var(--acc-text); font-weight: 600; }
+/* calculator */
+.calc { background: var(--intro-bg); border-radius: 8px; padding: 22px 24px; }
+.calc-uitkomst { margin: 22px 0 14px; padding: 22px 26px; background: var(--cta-bg); color: var(--cta-tekst); border-radius: 8px; border-left: 4px solid var(--cta-lijn); }
+.calc-uitkomst strong { color: #fff; box-shadow: none; font-size: 1.15em; }
+.calc-uitkomst .calc-noot { color: #c3cff0; }
+.calc-knop { background: #3563ff; color: #fff; border: 0; border-radius: 4px; min-height: 44px; padding: 0 20px; font-weight: 600; cursor: pointer; }
+.calc-knop:hover { background: #234fdf; }
