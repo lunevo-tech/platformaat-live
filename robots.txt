@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /beheer/
 
 Sitemap: https://platformaat.be/sitemap.xml
