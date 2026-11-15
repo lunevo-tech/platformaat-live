@@ -75,7 +75,7 @@ export default {
   voet: {
     over: 'Websites, apps and internal software for small and mid-sized companies in Belgium.',
     contact: 'Contact', meer: 'More',
-    links: [['Privacy', 'privacy'], ['Cookies', 'cookies'], ['Company details', 'bedrijfsgegevens']],
+    links: [['Industries', 'sectoren'], ['Guides', 'kennis'], ['FAQ', 'faq'], ['Savings calculator', 'calculator'], ['Where we work', 'regio'], ['Privacy', 'privacy'], ['Cookies', 'cookies'], ['Company details', 'bedrijfsgegevens']],
     ondernemingsnummer: 'Company number', btw: 'VAT',
     cookies: 'This site uses no cookies that require your consent.',
   },

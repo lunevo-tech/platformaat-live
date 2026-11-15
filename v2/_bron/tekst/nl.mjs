@@ -75,7 +75,7 @@ export default {
   voet: {
     over: 'Websites, apps en interne software voor kleine en middelgrote ondernemingen in België.',
     contact: 'Contact', meer: 'Meer',
-    links: [['Privacy', 'privacy'], ['Cookies', 'cookies'], ['Bedrijfsgegevens', 'bedrijfsgegevens']],
+    links: [['Sectoren', 'sectoren'], ['Kennis', 'kennis'], ['Veelgestelde vragen', 'faq'], ['Besparingscalculator', 'calculator'], ['Onze regio', 'regio'], ['Privacy', 'privacy'], ['Cookies', 'cookies'], ['Bedrijfsgegevens', 'bedrijfsgegevens']],
     ondernemingsnummer: 'Ondernemingsnummer', btw: 'Btw',
     cookies: 'Deze site gebruikt geen cookies waarvoor toestemming nodig is.',
   },

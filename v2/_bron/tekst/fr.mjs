@@ -75,7 +75,7 @@ export default {
   voet: {
     over: 'Sites web, applications et logiciels internes pour les petites et moyennes entreprises en Belgique.',
     contact: 'Contact', meer: 'Plus',
-    links: [['Confidentialité', 'privacy'], ['Cookies', 'cookies'], ['Mentions légales', 'bedrijfsgegevens']],
+    links: [['Secteurs', 'sectoren'], ['Ressources', 'kennis'], ['Questions fréquentes', 'faq'], ['Calculateur', 'calculator'], ['Notre région', 'regio'], ['Confidentialité', 'privacy'], ['Cookies', 'cookies'], ['Mentions légales', 'bedrijfsgegevens']],
     ondernemingsnummer: 'Numéro d’entreprise', btw: 'TVA',
     cookies: 'Ce site n’utilise aucun cookie nécessitant votre consentement.',
   },
