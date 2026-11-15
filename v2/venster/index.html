@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="nl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Voorbeeldplatform (venster) | PlatforMaat</title>
+<link rel="stylesheet" href="venster.css">
+<script>document.documentElement.className += ' js fx';</script>
+</head>
+<body class="venster">
+<svg class="sym" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+<symbol id="st-draft" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-dasharray="2.2 2.2"/></symbol>
+<symbol id="st-todo" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.6" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+<symbol id="st-prog" viewBox="0 0 14 14"><circle cx="7" cy="7" r="5.6" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M7 3.6a3.4 3.4 0 0 1 0 6.8z" fill="currentColor"/></symbol>
+<symbol id="st-done" viewBox="0 0 14 14"><circle cx="7" cy="7" r="6.3" fill="currentColor"/><path d="M4.4 7.2l1.9 1.9 3.4-3.8" fill="none" style="stroke: var(--st-check)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+<section class="demo" id="werkbank" aria-label="Voorbeeldplatform met verzonnen gegevens">
+  <div class="wrap">
+    <div class="demo-top"><ul class="demo-try js-only" aria-label="Probeer bijvoorbeeld" hidden><li><button type="button" data-pf-go="dossier:D-1041">Open een dossier met een AI-concept</button></li><li><button type="button" data-pf-go="view:planning">Schuif iets naar een andere dag</button></li><li><button type="button" data-pf-go="view:assistent">Vraag het de assistent</button></li><li><button type="button" data-pf-go="mode:klant">Bekijk het als klant</button></li></ul><button type="button" class="demo-play" id="pf-replay" hidden>Speel de demo opnieuw af</button></div>
+    <div class="pf" id="pf" data-mode="team" role="region" aria-label="Voorbeeldplatform met verzonnen gegevens">
+      <div class="pf-bar" id="pf-bar"></div>
+      <nav class="pf-side" id="pf-side" aria-label="Onderdelen van het voorbeeldplatform"></nav>
+      <div class="pf-main" id="pf-main" tabindex="-1"></div>
+      <aside class="pf-detail" id="pf-detail" hidden></aside>
+      <div class="pf-keys" aria-hidden="true"><span><kbd>N</kbd> Nieuw dossier</span><span><kbd><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 12.5v-9 M4.5 7L8 3.5 11.5 7"/></svg></kbd><kbd><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3.5v9 M4.5 9L8 12.5 11.5 9"/></svg></kbd> Kiezen</span><span><kbd><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M12.5 3.5v5h-8 M7.5 5.5l-3 3 3 3"/></svg></kbd> Openen</span><span><kbd>Esc</kbd> Sluiten</span></div>
+      <div class="pf-toast" id="pf-toast" role="status" aria-live="polite"></div>
+      <dialog class="pf-dlg" id="pf-dlg"></dialog>
+      <div class="pf-cur" id="pf-cur" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M3 2l12 6.5-5.2 1.6L7.6 15.6z" fill="#fff" stroke="#14213d" stroke-width="1.2" stroke-linejoin="round"/></svg></div>
+    </div>
+    <p class="demo-nojs">Dit voorbeeld heeft JavaScript nodig. Het toont een werkomgeving met overzicht, dossiers, planning, een assistent en koppelingen, en een klantportaal in dezelfde gegevens.</p>
+    <p class="demo-note">Voorbeeld met verzonnen gegevens · Klant A tot en met E bestaan niet</p>
+    <script type="application/json" id="pf-data">{"assistenten":["Klantenassistent","Planning-assistent","Rapport-assistent"]}</script>
+  </div>
+</section>
+<script src="platform.js" defer></script>
+<script>
+(function () {
+  'use strict';
+  var d = document.documentElement;
+  var root = document.getElementById('pf');
+  var cur = document.getElementById('pf-cur');
+  var replay = document.getElementById('pf-replay');
+  var reduce = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var allowed = !reduce;       // mag de demo spelen? (de pagina erboven zegt het via pmBeweging)
+  var took = false;            // heeft de bezoeker het zelf overgenomen?
+  var timer = null, i = 0, running = false;
+
+  /* thema: zelfde keuze als de pagina erboven */
+  try { if (window.parent === window) throw 0; var pt = parent.document.documentElement.getAttribute('data-theme'); if (pt === 'dark' || pt === 'light') d.setAttribute('data-theme', pt); else throw 0; } catch (e) { try { var k = localStorage.getItem('pm-thema'); var dk = k === 'dark' || (k !== 'light' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches); d.setAttribute('data-theme', dk ? 'dark' : 'light'); } catch (e2) { /* mag ontbreken */ } }
+
+  function say(text) { try { parent.postMessage({ pmStap: text }, '*'); } catch (e) { /* mag ontbreken */ } }
+  function q(sel) { return root.querySelector(sel); }
+  function click(sel) { var el = q(sel); if (el && !el.disabled) el.click(); }
+
+  /* de demo: elke stap zegt wat er gebeurt, de muisaanwijzer gaat erheen, tikt, en de echte knop wordt ingedrukt */
+  var STEPS = [
+    ['Overzicht: wat speelt er nu in de voorbeeldgegevens?', '[data-act="nav"][data-v="overzicht"]'],
+    ['Een dossier met een AI-concept openen', '[data-act="open"][data-id="D-1041"]', '[data-act="open"]'],
+    ['Een mens vinkt de controle aan…', '[data-act="ai-check"]'],
+    ['…en verstuurt het antwoord naar de klant', '[data-act="ai-send"]'],
+    ['Terug naar de lijst', '[data-act="close"]'],
+    ['Planning: een dossier naar een andere dag schuiven', '[data-act="nav"][data-v="planning"]'],
+    ['Het dossier schuift een dag op', '[data-act="shift"][data-dir="1"]:not(:disabled)'],
+    ['De assistent een vraag stellen', '[data-act="nav"][data-v="assistent"]'],
+    ['De assistent antwoordt, een mens controleert', '[data-act="ask"]:not(:disabled)'],
+    ['Het klantportaal: dezelfde gegevens, andere weergave', '[data-act="mode"][data-m="klant"]'],
+    ['Terug naar het team', '[data-act="mode"][data-m="team"]'],
+    ['De voorbeeldgegevens terugzetten en opnieuw beginnen', '[data-act="reset"]']
+  ];
+  /* schuif alleen de schuifvlakken binnen het venster (niet de pagina erboven) zodat de knop in beeld komt */
+  function reveal(el) {
+    for (var p = el.parentElement; p && p !== root; p = p.parentElement) {
+      if (p.scrollHeight <= p.clientHeight + 2) continue;
+      var oy = getComputedStyle(p).overflowY;
+      if (oy !== 'auto' && oy !== 'scroll') continue;
+      var pr = p.getBoundingClientRect(), er = el.getBoundingClientRect();
+      if (er.bottom > pr.bottom - 12) p.scrollTop += er.bottom - pr.bottom + 28;
+      else if (er.top < pr.top + 12) p.scrollTop -= pr.top - er.top + 28;
+    }
+  }
+  function moveTo(el, done) {
+    reveal(el);
+    var r = root.getBoundingClientRect(), b = el.getBoundingClientRect();
+    var x = b.left - r.left + Math.min(b.width * 0.5, 60), y = b.top - r.top + b.height * 0.55;
+    cur.classList.add('on');
+    cur.style.transform = 'translate(' + Math.round(x) + 'px,' + Math.round(y) + 'px)';
+    setTimeout(done, 820);
+  }
+  function step() {
+    if (!running) return;
+    var s = STEPS[i % STEPS.length];
+    var el = null;
+    for (var k = 1; k < s.length && !el; k++) el = q(s[k]);
+    if (!el || el.disabled) { i++; timer = setTimeout(step, 150); return; }
+    say(s[0]);
+    moveTo(el, function () {
+      if (!running) return;
+      cur.classList.remove('tap'); void cur.offsetWidth; cur.classList.add('tap');
+      el.click();
+      i++;
+      timer = setTimeout(step, 2300);
+    });
+  }
+  function start() { if (running || took || !allowed) return; running = true; replay.hidden = true; timer = setTimeout(step, 900); }
+  function stop() { running = false; clearTimeout(timer); cur.classList.remove('on'); }
+
+  /* bezoeker neemt over */
+  function overnemen() {
+    if (took) return;
+    took = true; stop(); replay.hidden = false;
+    say('Je hebt het zelf overgenomen. Druk op «Speel de demo opnieuw af» om de demo weer te zien.');
+  }
+  root.addEventListener('pointerdown', overnemen, true);
+  root.addEventListener('keydown', overnemen, true);
+  document.querySelectorAll('.demo-try').forEach(function (n) { n.addEventListener('pointerdown', overnemen, true); });
+  replay.addEventListener('click', function () { took = false; click('[data-act="reset"]'); i = 0; start(); });
+
+  /* de pagina erboven stuurt thema, pauze en beweging door */
+  window.addEventListener('message', function (e) {
+    var m = e.data || {};
+    if (m.pmThema === 'dark' || m.pmThema === 'light') d.setAttribute('data-theme', m.pmThema);
+    if (m.pmBeweging) { allowed = m.pmBeweging === 'aan'; if (allowed) start(); else { stop(); say('De demo staat op pauze. Je kunt het venster zelf gebruiken of de beweging weer aanzetten.'); } }
+  });
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.js-only').forEach(function (n) { n.hidden = false; });
+    var post = function () { try { parent.postMessage({ pmHoogte: document.documentElement.scrollHeight }, '*'); } catch (e) { /* mag ontbreken */ } };
+    if (window.ResizeObserver) new ResizeObserver(post).observe(document.body);
+    window.addEventListener('load', post); window.addEventListener('resize', post); post();
+    if (window.parent !== window) { try { parent.postMessage({ pmVraagBeweging: true }, '*'); } catch (e) { /* mag ontbreken */ } }
+    else start();
+    /* geen antwoord van de pagina erboven? dan beslist «minder beweging» */
+    setTimeout(function () { if (!running && !took && allowed) start(); }, 700);
+  });
+})();
+</script>
+</body>
+</html>
