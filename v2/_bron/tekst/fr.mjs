@@ -46,8 +46,8 @@ export default {
     prijsIntro: 'Prix de départ, hors TVA. L’offre mentionne toujours un prix fixe.',
     prijzen: [
       ['Site web', '790 €', 'à partir de, une fois', 'Un site soigné de quelques pages, que vous pouvez mettre à jour vous-même.'],
-      ['Logiciel sur mesure', '450 €', 'à partir de, première partie', 'Un premier morceau bien délimité, par exemple un formulaire ou un tableau de suivi, pour vérifier que cela fonctionne.'],
-      ['Hébergement et maintenance', 'Par mois', 'prix fixe dans l’offre', 'Mises à jour, sauvegardes dans l’UE et petites adaptations.'],
+      ['Logiciel sur mesure', '450 €', 'à partir de, scan de processus', 'Une demi-journée ensemble sur votre façon de travailler, avec trois gains rapides. Une première partie sur mesure démarre à 3 500 €.'],
+      ['Hébergement et maintenance', '29 €', 'à partir de, par mois', 'Hébergement dans l’UE. Avec mises à jour, sauvegardes et petites modifications à partir de 59 € par mois.'],
     ],
     prijsNoot: 'Un projet plus important est découpé en parties, chacune à prix fixe.',
     stapTitel: 'Que se passe-t-il quand vous nous écrivez ?',
@@ -79,5 +79,9 @@ export default {
     ondernemingsnummer: 'Numéro d’entreprise', btw: 'TVA',
     cookies: 'Ce site n’utilise aucun cookie nécessitant votre consentement.',
   },
+  voorbeeldLabel: 'Exemple, pas un client réel',
+  kruimLabel: 'Fil d’Ariane',
+  slot: { h2: 'Dites-nous ce qui coince', p: 'Un premier échange ne coûte rien et ne vous engage à rien. Vous recevez une réponse honnête, même si elle est «ce n’est pas pour nous».' },
+  fout: { h1: 'Cette page n’existe pas', p: 'Cette page n’existe pas ou a été déplacée.', knop: 'Vers la page d’accueil' },
   kies: { title: 'PlatforMaat : choisissez votre langue', h1: 'Choisissez votre langue', lead: 'PlatforMaat développe des logiciels sur mesure pour les PME en Belgique.' },
 };

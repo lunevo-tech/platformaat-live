@@ -46,8 +46,8 @@ export default {
     prijsIntro: 'Vanafprijzen, exclusief btw. In de offerte staat altijd een vaste prijs.',
     prijzen: [
       ['Website', '€ 790', 'vanaf, eenmalig', 'Een verzorgde site van een paar pagina’s, die je zelf kunt bijwerken.'],
-      ['Software op maat', '€ 450', 'vanaf, eerste deel', 'Een afgebakend eerste stuk, zoals een formulier of een overzicht, om te testen of het werkt.'],
-      ['Hosting en onderhoud', 'Per maand', 'vaste prijs in de offerte', 'Updates, back-ups in de EU en kleine aanpassingen.'],
+      ['Software op maat', '€ 450', 'vanaf, proces-scan', 'Een halve dag samen naar je werkwijze kijken, met drie snelle winsten. Een eerste deel op maat start vanaf € 3.500.'],
+      ['Hosting en onderhoud', '€ 29', 'vanaf, per maand', 'Hosting in de EU. Met updates, back-ups en kleine wijzigingen vanaf € 59 per maand.'],
     ],
     prijsNoot: 'Groter werk splitsen we op in delen, elk met een eigen vaste prijs.',
     stapTitel: 'Wat gebeurt er als je schrijft?',
@@ -79,5 +79,9 @@ export default {
     ondernemingsnummer: 'Ondernemingsnummer', btw: 'Btw',
     cookies: 'Deze site gebruikt geen cookies waarvoor toestemming nodig is.',
   },
+  voorbeeldLabel: 'Voorbeeld, geen echte klant',
+  kruimLabel: 'Kruimelpad',
+  slot: { h2: 'Vertel wat vastloopt', p: 'Een eerste gesprek kost niets en verplicht tot niets. Je krijgt een eerlijk antwoord, ook als dat «niet bij ons» is.' },
+  fout: { h1: 'Deze pagina bestaat niet (meer)', p: 'Deze pagina bestaat niet of is verhuisd.', knop: 'Naar de startpagina' },
   kies: { title: 'PlatforMaat: kies je taal', h1: 'Kies je taal', lead: 'PlatforMaat bouwt software op maat voor kmo’s in België.' },
 };

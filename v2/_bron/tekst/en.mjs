@@ -46,8 +46,8 @@ export default {
     prijsIntro: 'Starting prices, excluding VAT. Every quote states a fixed price.',
     prijzen: [
       ['Website', '€790', 'from, one-off', 'A well-made site of a few pages that you can update yourself.'],
-      ['Custom software', '€450', 'from, first part', 'A clearly scoped first piece, such as a form or an overview, to test that it works.'],
-      ['Hosting and maintenance', 'Monthly', 'fixed price in the quote', 'Updates, EU backups and small changes.'],
+      ['Custom software', '€450', 'from, process scan', 'Half a day looking at how you work, with three quick wins. A first custom part starts at €3,500.'],
+      ['Hosting and maintenance', '€29', 'from, per month', 'EU hosting. With updates, backups and small changes from €59 a month.'],
     ],
     prijsNoot: 'Larger projects are split into parts, each with its own fixed price.',
     stapTitel: 'What happens when you get in touch?',
@@ -79,5 +79,9 @@ export default {
     ondernemingsnummer: 'Company number', btw: 'VAT',
     cookies: 'This site uses no cookies that require your consent.',
   },
+  voorbeeldLabel: 'Example, not a real client',
+  kruimLabel: 'Breadcrumb',
+  slot: { h2: 'Tell us what’s stuck', p: 'A first conversation costs nothing and commits you to nothing. You get an honest answer, even if it is “we’re not the right fit”.' },
+  fout: { h1: 'Page not found', p: 'This page doesn’t exist or has moved.', knop: 'Go to the home page' },
   kies: { title: 'PlatforMaat: choose your language', h1: 'Choose your language', lead: 'PlatforMaat builds custom software for small businesses in Belgium.' },
 };
