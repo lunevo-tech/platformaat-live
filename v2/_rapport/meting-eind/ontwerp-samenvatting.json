@@ -1,0 +1,20 @@
+{
+ "impeccable": {
+  "totaal": 714,
+  "soorten": [
+   "cramped-padding"
+  ]
+ },
+ "hallmark": {
+  "fails": 79,
+  "reflex": 2,
+  "warns": 121,
+  "waived": 0,
+  "rejected": 0,
+  "answered": 0,
+  "dismissed": 0,
+  "notes": 0,
+  "files": 117,
+  "render": "off"
+ }
+}

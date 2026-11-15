@@ -323,6 +323,7 @@ function fout404() {
 <meta name="robots" content="noindex,nofollow">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; base-uri 'self'; object-src 'none'">
 <title>Pagina niet gevonden · Page introuvable · Page not found | PlatforMaat</title>
+<meta name="description" content="Deze pagina bestaat niet. Cette page n’existe pas. This page does not exist.">
 <link rel="icon" href="${b}assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="${b}css/site.css">
 </head>

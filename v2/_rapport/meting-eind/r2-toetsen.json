@@ -1,0 +1,1939 @@
+{
+ "donker": [
+  {
+   "s": "nl/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "fr/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "en/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "nl/aanbod/maatwerksoftware/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "fr/tarifs/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "en/faq/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "nl/privacy/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "fr/mentions-legales/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "en/industries/installers/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "nl/kennis/wat-kost-maatwerksoftware/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "fr/calculateur-economies/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "en/examples/",
+   "w": 390,
+   "v": []
+  },
+  {
+   "s": "nl/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "fr/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "en/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "nl/aanbod/maatwerksoftware/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "fr/tarifs/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "en/faq/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "nl/privacy/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "fr/mentions-legales/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "en/industries/installers/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "nl/kennis/wat-kost-maatwerksoftware/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "fr/calculateur-economies/",
+   "w": 1440,
+   "v": []
+  },
+  {
+   "s": "en/examples/",
+   "w": 1440,
+   "v": []
+  }
+ ],
+ "toetsenbord": [
+  {
+   "s": "nl/",
+   "w": 1440,
+   "eerste": {
+    "tag": "a",
+    "tekst": "Naar de inhoud",
+    "focusZichtbaar": true,
+    "inBeeld": true
+   },
+   "allesZichtbaar": true,
+   "volgorde": [
+    "a:Naar de inhoud",
+    "a:",
+    "a:Aanbod",
+    "a:Voorbeelden",
+    "a:Prijzen",
+    "a:Werkwijze",
+    "a:Contact",
+    "a:FR",
+    "a:EN",
+    "a:Plan een kennismaking",
+    "a:Bel 0483 85 13 22",
+    "a:Kies een moment",
+    "a:0483 85 13 22",
+    "a:info@platformaat.be"
+   ],
+   "naSkip": "#inhoud"
+  },
+  {
+   "s": "fr/services/logiciel-sur-mesure/",
+   "w": 1440,
+   "eerste": {
+    "tag": "a",
+    "tekst": "Aller au contenu",
+    "focusZichtbaar": true,
+    "inBeeld": true
+   },
+   "allesZichtbaar": true,
+   "volgorde": [
+    "a:Aller au contenu",
+    "a:",
+    "a:Services",
+    "a:Exemples",
+    "a:Tarifs",
+    "a:Méthode",
+    "a:Contact",
+    "a:NL",
+    "a:EN",
+    "a:PlatforMaat",
+    "a:Services",
+    "a:Connexions et données\nVotre lo",
+    "a:Conseil et conception\nTout sur",
+    "a:Maintenance\nAprès la livraison"
+   ],
+   "naSkip": "#inhoud"
+  },
+  {
+   "s": "en/",
+   "w": 390,
+   "eerste": {
+    "tag": "a",
+    "tekst": "Skip to content",
+    "focusZichtbaar": true,
+    "inBeeld": true
+   },
+   "allesZichtbaar": true,
+   "volgorde": [
+    "a:Skip to content",
+    "a:",
+    "summary:Menu",
+    "a:NL",
+    "a:FR",
+    "a:Book an intro call",
+    "a:Call +32 483 85 13 22",
+    "a:Pick a time",
+    "a:0483 85 13 22",
+    "a:info@platformaat.be",
+    "input:",
+    "input:",
+    "textarea:",
+    "button:Send"
+   ],
+   "naSkip": "#inhoud",
+   "menuOpen": true,
+   "naMenuTab": "in menu"
+  },
+  {
+   "s": "nl/vragen/",
+   "w": 390,
+   "eerste": {
+    "tag": "a",
+    "tekst": "Naar de inhoud",
+    "focusZichtbaar": true,
+    "inBeeld": true
+   },
+   "allesZichtbaar": true,
+   "volgorde": [
+    "a:Naar de inhoud",
+    "a:",
+    "summary:Menu",
+    "a:FR",
+    "a:EN",
+    "a:PlatforMaat",
+    "summary:Wat doet PlatforMaat?",
+    "summary:Voor wie werken jullie?",
+    "summary:Wat kost het?",
+    "summary:Hoe lang duurt een project?",
+    "summary:Moet ik mijn pakketten vervang",
+    "summary:Wat als jullie ooit niet meer ",
+    "summary:Van wie zijn de code en de geg",
+    "summary:Waar staan mijn gegevens?"
+   ],
+   "naSkip": "#inhoud",
+   "menuOpen": true,
+   "naMenuTab": "in menu"
+  }
+ ],
+ "boom": [
+  {
+   "s": "en/area/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 44
+  },
+  {
+   "s": "en/company-details/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 29
+  },
+  {
+   "s": "en/cookies/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 21
+  },
+  {
+   "s": "en/examples/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 34
+  },
+  {
+   "s": "en/faq/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 62
+  },
+  {
+   "s": "en/guides/ai-in-a-small-business/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 56
+  },
+  {
+   "s": "en/guides/automating-quotes/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 60
+  },
+  {
+   "s": "en/guides/cost-of-custom-software/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 45
+  },
+  {
+   "s": "en/guides/custom-or-off-the-shelf/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 61
+  },
+  {
+   "s": "en/guides/data-and-gdpr/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 55
+  },
+  {
+   "s": "en/guides/how-a-project-runs/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 53
+  },
+  {
+   "s": "en/guides/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 55
+  },
+  {
+   "s": "en/guides/integrations-explained/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 73
+  },
+  {
+   "s": "en/guides/internal-platform/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 64
+  },
+  {
+   "s": "en/guides/maintenance-and-ownership/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 65
+  },
+  {
+   "s": "en/guides/website-platform-or-app/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 57
+  },
+  {
+   "s": "en/how-it-works/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 63
+  },
+  {
+   "s": "en/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 2,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 61
+  },
+  {
+   "s": "en/industries/accounting-firms/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 50
+  },
+  {
+   "s": "en/industries/building-finishing/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 52
+  },
+  {
+   "s": "en/industries/engineering-and-inspection/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 60
+  },
+  {
+   "s": "en/industries/hospitality/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 45
+  },
+  {
+   "s": "en/industries/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 51
+  },
+  {
+   "s": "en/industries/installers/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 44
+  },
+  {
+   "s": "en/industries/local-businesses/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 50
+  },
+  {
+   "s": "en/industries/logistics/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 57
+  },
+  {
+   "s": "en/industries/manufacturing/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 47
+  },
+  {
+   "s": "en/industries/wholesale/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 43
+  },
+  {
+   "s": "en/pricing/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 57
+  },
+  {
+   "s": "en/privacy/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 28
+  },
+  {
+   "s": "en/savings-calculator/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 68
+  },
+  {
+   "s": "en/services/advice-and-design/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 59
+  },
+  {
+   "s": "en/services/ai/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 65
+  },
+  {
+   "s": "en/services/custom-software/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 62
+  },
+  {
+   "s": "en/services/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 63
+  },
+  {
+   "s": "en/services/integrations/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 60
+  },
+  {
+   "s": "en/services/maintenance/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 47
+  },
+  {
+   "s": "en/services/websites-shops-apps/",
+   "lang": "en",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 66
+  },
+  {
+   "s": "fr/calculateur-economies/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 73
+  },
+  {
+   "s": "fr/confidentialite/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 44
+  },
+  {
+   "s": "fr/cookies/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 21
+  },
+  {
+   "s": "fr/exemples/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 38
+  },
+  {
+   "s": "fr/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 2,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 55
+  },
+  {
+   "s": "fr/mentions-legales/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 30
+  },
+  {
+   "s": "fr/methode/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 75
+  },
+  {
+   "s": "fr/questions/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 61
+  },
+  {
+   "s": "fr/region/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 69
+  },
+  {
+   "s": "fr/ressources/automatiser-les-devis/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 80
+  },
+  {
+   "s": "fr/ressources/connexions-entre-logiciels/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 72
+  },
+  {
+   "s": "fr/ressources/deroulement-projet/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 55
+  },
+  {
+   "s": "fr/ressources/donnees-et-rgpd/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 62
+  },
+  {
+   "s": "fr/ressources/ia-dans-une-pme/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 63
+  },
+  {
+   "s": "fr/ressources/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 60
+  },
+  {
+   "s": "fr/ressources/maintenance-et-propriete/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 66
+  },
+  {
+   "s": "fr/ressources/plateforme-interne/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 75
+  },
+  {
+   "s": "fr/ressources/prix-logiciel-sur-mesure/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 52
+  },
+  {
+   "s": "fr/ressources/site-plateforme-ou-application/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 78
+  },
+  {
+   "s": "fr/ressources/sur-mesure-ou-standard/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 65
+  },
+  {
+   "s": "fr/secteurs/bureaux-etudes-et-controle/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 70
+  },
+  {
+   "s": "fr/secteurs/commerces/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 61
+  },
+  {
+   "s": "fr/secteurs/fiduciaires/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 50
+  },
+  {
+   "s": "fr/secteurs/finitions/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 60
+  },
+  {
+   "s": "fr/secteurs/grossistes/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 49
+  },
+  {
+   "s": "fr/secteurs/horeca/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 45
+  },
+  {
+   "s": "fr/secteurs/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 55
+  },
+  {
+   "s": "fr/secteurs/installateurs/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 52
+  },
+  {
+   "s": "fr/secteurs/logistique/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 62
+  },
+  {
+   "s": "fr/secteurs/production/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 49
+  },
+  {
+   "s": "fr/services/connexions/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 60
+  },
+  {
+   "s": "fr/services/conseil-et-conception/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 62
+  },
+  {
+   "s": "fr/services/ia/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 69
+  },
+  {
+   "s": "fr/services/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 63
+  },
+  {
+   "s": "fr/services/logiciel-sur-mesure/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 54
+  },
+  {
+   "s": "fr/services/maintenance/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 50
+  },
+  {
+   "s": "fr/services/sites-web-boutiques-applications/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 68
+  },
+  {
+   "s": "fr/tarifs/",
+   "lang": "fr-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 65
+  },
+  {
+   "s": "nl/aanbod/advies-en-ontwerp/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 57
+  },
+  {
+   "s": "nl/aanbod/ai/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 56
+  },
+  {
+   "s": "nl/aanbod/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 59
+  },
+  {
+   "s": "nl/aanbod/koppelingen/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 59
+  },
+  {
+   "s": "nl/aanbod/maatwerksoftware/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 53
+  },
+  {
+   "s": "nl/aanbod/onderhoud/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 43
+  },
+  {
+   "s": "nl/aanbod/websites-webshops-apps/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 51
+  },
+  {
+   "s": "nl/bedrijfsgegevens/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 41
+  },
+  {
+   "s": "nl/besparingscalculator/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 63
+  },
+  {
+   "s": "nl/cookies/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 21
+  },
+  {
+   "s": "nl/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 2,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 51
+  },
+  {
+   "s": "nl/kennis/ai-in-een-kmo/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 44
+  },
+  {
+   "s": "nl/kennis/gegevens-en-avg/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 56
+  },
+  {
+   "s": "nl/kennis/hoe-verloopt-een-project/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 47
+  },
+  {
+   "s": "nl/kennis/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 50
+  },
+  {
+   "s": "nl/kennis/koppelingen-tussen-pakketten/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 67
+  },
+  {
+   "s": "nl/kennis/maatwerk-of-standaardsoftware/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 57
+  },
+  {
+   "s": "nl/kennis/offertes-automatiseren/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 58
+  },
+  {
+   "s": "nl/kennis/onderhoud-en-eigendom/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 62
+  },
+  {
+   "s": "nl/kennis/wat-is-een-intern-platform/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 65
+  },
+  {
+   "s": "nl/kennis/wat-kost-maatwerksoftware/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 40
+  },
+  {
+   "s": "nl/kennis/website-platform-of-app/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 57
+  },
+  {
+   "s": "nl/prijzen/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 52
+  },
+  {
+   "s": "nl/privacy/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 31
+  },
+  {
+   "s": "nl/regio-antwerpen/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 55
+  },
+  {
+   "s": "nl/sectoren/boekhoudkantoren/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 52
+  },
+  {
+   "s": "nl/sectoren/bouwafwerking/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 49
+  },
+  {
+   "s": "nl/sectoren/groothandel/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 47
+  },
+  {
+   "s": "nl/sectoren/handelaars/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 62
+  },
+  {
+   "s": "nl/sectoren/horeca/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 42
+  },
+  {
+   "s": "nl/sectoren/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 56
+  },
+  {
+   "s": "nl/sectoren/ingenieurs-en-keuringsbureaus/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 66
+  },
+  {
+   "s": "nl/sectoren/installateurs/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 49
+  },
+  {
+   "s": "nl/sectoren/logistiek/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 58
+  },
+  {
+   "s": "nl/sectoren/productiebedrijven/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 54
+  },
+  {
+   "s": "nl/voorbeelden/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 38
+  },
+  {
+   "s": "nl/vragen/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 55
+  },
+  {
+   "s": "nl/werkwijze/",
+   "lang": "nl-BE",
+   "h1": 1,
+   "sprong": 0,
+   "lm": {
+    "banner": true,
+    "main": 1,
+    "nav": 3,
+    "contentinfo": true
+   },
+   "zonderLabel": 0,
+   "title": 63
+  }
+ ],
+ "boomVoorbeeldFr": "- main:\n  - heading \"Des logiciels taillés pour votre entreprise.\" [level=1]\n  - paragraph: Sites web, applications et outils internes pour les PME belges.\n  - link \"Prendre rendez-vous\":\n    - /url: https://cal.com/platformaat/15min\n  - link \"Appeler le 0483 85 13 22\":\n    - /url: tel:+32483851322\n  - list:\n    - listitem:\n      - strong: Prix fixe\n      - text: Vous connaissez le montant avant le début du travail. Pas de facturation à l’heure.\n    - listitem:\n      - strong: À vous\n      - text: Vos données restent les vôtres. Pour le sur-mesure, le code aussi, documentation comprise.\n    - listitem:\n      - strong: Dans l’UE\n      - text: Hébergement et sauvegardes au sein de l’Union européenne.\n  - region \"Ce que nous réalisons\":\n    - heading \"Ce que nous réalisons\" [level=2]\n    - paragraph: D’une tâche fastidieuse à l’outil sur lequel tourne toute votre activité.\n    - term: Logiciels sur mesure et portails\n    - definition: Votre propre outil pour les devis, le planning, les bons d’intervention ou le suivi client, pensé autour de la façon dont votre équipe travaille.\n    - term: Sites web et boutiques en ligne\n    - definition: Un site rapide, à vos couleurs, que vous mettez à jour vous-même.\n    - term: Connexions entre logiciels",
+ "netwerk": [
+  {
+   "net": "Slow 4G",
+   "versie": "oud",
+   "fcp": 1500,
+   "lcp": 1500,
+   "load": 2260,
+   "kB": 355
+  },
+  {
+   "net": "Slow 4G",
+   "versie": "nieuw nl",
+   "fcp": 844,
+   "lcp": 844,
+   "load": 1218,
+   "kB": 101
+  },
+  {
+   "net": "Slow 4G",
+   "versie": "nieuw fr",
+   "fcp": 812,
+   "lcp": 812,
+   "load": 1177,
+   "kB": 101
+  },
+  {
+   "net": "Slow 4G",
+   "versie": "nieuw en",
+   "fcp": 760,
+   "lcp": 760,
+   "load": 1118,
+   "kB": 100
+  },
+  {
+   "net": "Slow 4G",
+   "versie": "oud prijzen",
+   "fcp": 1200,
+   "lcp": 1200,
+   "load": 1206,
+   "kB": 139
+  },
+  {
+   "net": "Slow 4G",
+   "versie": "nieuw prijzen",
+   "fcp": 728,
+   "lcp": 728,
+   "load": 966,
+   "kB": 66
+  },
+  {
+   "net": "3G",
+   "versie": "oud",
+   "fcp": 2436,
+   "lcp": 2436,
+   "load": 4640,
+   "kB": 355
+  },
+  {
+   "net": "3G",
+   "versie": "nieuw nl",
+   "fcp": 1384,
+   "lcp": 1384,
+   "load": 2136,
+   "kB": 101
+  },
+  {
+   "net": "3G",
+   "versie": "nieuw fr",
+   "fcp": 1452,
+   "lcp": 1452,
+   "load": 2209,
+   "kB": 101
+  },
+  {
+   "net": "3G",
+   "versie": "nieuw en",
+   "fcp": 1340,
+   "lcp": 1340,
+   "load": 2084,
+   "kB": 100
+  },
+  {
+   "net": "3G",
+   "versie": "oud prijzen",
+   "fcp": 2396,
+   "lcp": 2396,
+   "load": 2451,
+   "kB": 139
+  },
+  {
+   "net": "3G",
+   "versie": "nieuw prijzen",
+   "fcp": 1464,
+   "lcp": 1464,
+   "load": 1938,
+   "kB": 66
+  }
+ ]
+}
