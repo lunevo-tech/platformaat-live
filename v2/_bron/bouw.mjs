@@ -139,9 +139,11 @@ function opmaak(s, t, d) {
 
 function caseBlok(b, t, d) {
   // Een echte naam of logo verschijnt alleen met echt: true én een ingevulde toestemming.
+  // Een echte case zonder ingevulde toestemming wordt helemaal niet getoond (geen naam, geen cijfers).
   const toon = b.echt === true && String(b.toestemming || '').trim() !== '';
+  if (b.echt === true && !toon) return '';
   const naam = toon ? b.echteNaam : b.naam;
-  const label = toon ? '' : `<p class="tag">${esc(t.voorbeeldLabel)}</p>`;
+  const label = toon ? (b.labelEcht ? `<p class="tag">${esc(b.labelEcht)}</p>` : '') : `<p class="tag">${esc(t.voorbeeldLabel)}</p>`;
   return `<article class="example case"><h3>${esc(naam)}</h3>${b.p.map((x) => `<p>${opmaak(x, t, d)}</p>`).join('')}${b.rijen ? `<dl>${b.rijen.map(([a, c]) => `<dt>${esc(a)}</dt><dd>${esc(c)}</dd>`).join('')}</dl>` : ''}${label}</article>`;
 }
 
@@ -160,6 +162,7 @@ function blok(b, t, d, i) {
     case 'prijzen': return wrapS(`<div class="prices">${b.items.map(([k, bedrag, sub, v]) => `<article class="price"><h3>${esc(k)}</h3><p class="amount">${esc(bedrag)}<small>${esc(sub)}</small></p><p>${opmaak(v, t, d)}</p></article>`).join('')}</div>${b.noot ? `<p class="note">${opmaak(b.noot, t, d)}</p>` : ''}`);
     case 'cases': return wrapS(`<div class="examples">${b.items.map((c) => caseBlok(c, t, d)).join('')}</div>`);
     case 'tabel': return wrapS(`<div class="table-wrap" tabindex="0" role="region" aria-labelledby="${id}"><table><thead><tr>${b.kop.map((x) => `<th scope="col">${esc(x)}</th>`).join('')}</tr></thead><tbody>${b.rijen.map((r) => `<tr>${r.map((x, j) => (j === 0 ? `<th scope="row">${esc(x)}</th>` : `<td>${opmaak(x, t, d)}</td>`)).join('')}</tr>`).join('')}</tbody></table></div>`);
+    case 'calculator': return wrapS(`<form class="calc" id="calc" data-uit="${esc(b.uit)}" data-lang="${t.hreflang}">${b.velden.map(([k, l, v]) => `<label>${esc(l)}<input name="${k}" type="number" inputmode="decimal" min="0" step="any" value="${v}"></label>`).join('')}<p class="calc-out" id="calc-uit" role="status" aria-live="polite"></p><p class="note">${esc(b.noot)}</p></form>`);
     default: throw new Error(`onbekend bloktype ${b.type}`);
   }
 }

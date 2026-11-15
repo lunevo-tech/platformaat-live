@@ -19,3 +19,22 @@
     window.location.href = 'mailto:' + form.dataset.mail + '?subject=' + encodeURIComponent(form.dataset.onderwerp) + '&body=' + encodeURIComponent(body);
   });
 })();
+
+// Besparingscalculator: rekent alleen in de browser, verstuurt en bewaart niets.
+(function () {
+  var f = document.getElementById('calc');
+  if (!f) return;
+  var out = document.getElementById('calc-uit');
+  var eur = new Intl.NumberFormat(f.dataset.lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 });
+  var num = new Intl.NumberFormat(f.dataset.lang, { maximumFractionDigits: 0 });
+  function v(n) { var x = parseFloat(String(f.elements[n].value).replace(',', '.')); return isFinite(x) && x > 0 ? x : 0; }
+  function reken() {
+    var uren = v('keer') * v('min') / 60 * v('weken');
+    var kost = uren * v('uur');
+    var pct = Math.min(v('pct'), 100);
+    out.textContent = f.dataset.uit.replace('{uren}', num.format(uren)).replace('{kost}', eur.format(kost)).replace('{pct}', num.format(pct)).replace('{winst}', eur.format(kost * pct / 100));
+  }
+  f.addEventListener('input', reken);
+  f.addEventListener('submit', function (e) { e.preventDefault(); });
+  reken();
+})();

@@ -258,3 +258,5 @@ thead th { border-bottom: 2px solid var(--c-ink); }
 @media (max-width: 900px) { .cards { grid-template-columns: minmax(0, 1fr); } }
 
 .price .amount { color: var(--c-ink); }
+.calc { max-width: 640px; }
+.calc-out { font-size: var(--t-lead); font-weight: 600; padding: var(--s-5); background: var(--c-paper-raised); border: 1px solid var(--c-line); border-radius: var(--radius); }
