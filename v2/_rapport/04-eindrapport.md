@@ -90,3 +90,26 @@ De testmap `02-platformaat\v2-testmap` is na de laatste meting gewist.
 5. **Jurist:** tellen zonder banner, en of de FR- en EN-vertaling van de juridische teksten volstaat.
 6. **Formulier live zetten:** de route (Brevo/Scaleway) aansluiten in plaats van de testmodus.
 7. **Nalezing** van FR en EN door een moedertaalspreker (advies).
+
+## 7. Voorbeeldplatform en editor (vraag Rayane 15-11, nog niets gebouwd)
+**Wat ze nu doen op de live site (GEZIEN IN CODE, main):**
+- **Voorbeeldplatform** (`voorbeeld.html` met daarin `venster/index.html`, `platform.js` van 555 regels en `venster.css` van 83 kB): een klikbare demo van een werkomgeving en een klantportaal, met de tabbladen Overzicht, Dossiers, Planning, Assistent en Koppelingen. Gewoon JavaScript, geen netwerkverzoeken, niets wordt opgeslagen, klanten A tot E zijn verzonnen. Alle teksten staan in het Nederlands in de code.
+- **Editor `/beheer/`** (`editor.js`, 361 regels): je logt in met een GitHub-token dat in je browser bewaard blijft, opent een echte pagina, klikt op een tekst of foto en past aan. «Opslaan» schrijft rechtstreeks in de HTML-bestanden op main (één commit), dus meteen live. «Laatste opslag ongedaan maken» is het vangnet.
+
+**Werk om ze naar V2 over te zetten (INSCHATTING):**
+- Voorbeeldplatform: ongeveer één werksessie. Alle teksten uit `platform.js` in een vertaalobject zetten (NL/FR/EN), het venster per taal laden, de kleuren laten aansluiten en meten met axe en het toetsenbord.
+- Editor: één à twee werksessies, en dat is het belangrijke punt. V2 wordt gebouwd uit `_bron/inhoud/*.mjs`. Wie de HTML rechtstreeks aanpast, ziet zijn wijziging bij de volgende bouw verdwijnen. Er zijn twee wegen: (a) de editor laten schrijven in de inhoudsbestanden (best als JSON) plus een GitHub Action die na elke opslag opnieuw bouwt; (b) Decap CMS (catalogus: Gebruiken bij een statische site). Decap vraagt op GitHub Pages wel een aparte aanmeldserver.
+- Let op: zolang de live site via de editor verandert, lopen V2 en live uit elkaar. Wijzigingen na 15-11 moeten vóór de livegang met de hand in V2 overgenomen worden.
+
+**Advies:** de editor vervangen door een versie die de inhoudsbestanden van V2 aanpast (weg a), vóór de livegang; het voorbeeldplatform overzetten en vertalen als aparte stap na de livegang, omdat het verkoopt maar de livegang niet blokkeert.
+
+## 8. Checklist vóór livegang
+- [ ] Nalezing van FR en EN door een moedertaalspreker
+- [ ] Jurist: privacy, cookies en colofon in 3 talen, en tellen zonder banner (Umami)
+- [ ] Echte schermlezertest (NVDA of VoiceOver) door een mens
+- [ ] Schriftelijke toestemming voor de case raamdecoratie (tekst en cijfers), daarna `toestemming` invullen
+- [ ] Umami op Vercel (fra1) met Supabase Frankfurt, daarna privacy en cookies aanpassen
+- [ ] Editor voor V2 (zie 7), en wijzigingen van de live site sinds 15-11 overgenomen
+- [ ] Formulierroute aangesloten in plaats van de testmodus
+- [ ] 404 naar vaste paden `/` in plaats van `/v2/` (als V2 de hoofdsite wordt), en noindex weg
+- [ ] Rayanes «ja» voor de merge naar main
