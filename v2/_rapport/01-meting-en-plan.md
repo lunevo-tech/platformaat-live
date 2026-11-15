@@ -42,7 +42,7 @@ Tools: axe-core 4.11.3 (regels WCAG 2.0/2.1/2.2 A+AA), Playwright 1.62.1 met Chr
 - **GEZIEN IN CODE:** elke pagina heeft een description, canonical en JSON-LD. Er is een sitemap en `robots.txt`. Er ontbreken hreflang en vertaalde pagina's.
 
 ### Vertrouwen, contact en juridisch
-- **GEZIEN IN CODE:** de pagina's case-la-mia, case-vekemans en case-zichtbaar-media en de logo's dragen echte namen. Het contactformulier (`contact37.js`) stuurt naar een Scaleway-functie (fr-par), dus een echt adres. De afspraken lopen via cal.com. Het ondernemingsnummer staat in de footer. Er zijn een privacy- en een cookiepagina.
+- **GEZIEN IN CODE:** drie case-pagina's en hun logo's dragen echte namen (twee klanten en het eigen zustermerk; de namen staan niet in dit rapport). Het contactformulier (`contact37.js`) stuurt naar een Scaleway-functie (fr-par), dus een echt adres. De afspraken lopen via cal.com. Het ondernemingsnummer staat in de footer. Er zijn een privacy- en een cookiepagina.
 
 ### Veiligheid
 - **GEMETEN:** geen beveiligingskoppen (CSP, HSTS, X-Frame-Options, Referrer-Policy, Permissions-Policy). GitHub Pages laat geen eigen koppen toe. Alleen een CSP via `<meta>` en een referrer-meta zijn mogelijk.
