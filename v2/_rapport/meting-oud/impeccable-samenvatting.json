@@ -1,0 +1,18 @@
+{
+ "totaal": 348,
+ "perSoort": {
+  "side-tab": 74,
+  "low-contrast": 6,
+  "extreme-negative-tracking": 57,
+  "overused-font": 46,
+  "dark-glow": 44,
+  "codex-grid-background": 46,
+  "cramped-padding": 26,
+  "bounce-easing": 7,
+  "nested-cards": 4,
+  "gray-on-color": 1,
+  "undersized-ui-text": 30,
+  "tight-leading": 1,
+  "tiny-text": 6
+ }
+}
