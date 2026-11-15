@@ -12,6 +12,8 @@ const BASIS = 'https://platformaat.be/'; // toekomstig adres; V2 staat op noinde
 const AGENDA = 'https://cal.com/platformaat/15min';
 const TEL = '+32483851322';
 const MAIL = 'info@platformaat.be';
+// Voorbeeldsite met editor: de editor voegt een <style> toe in de pagina, dus daar mag inline stijl. Live blijft strikt.
+const STIJL = process.env.V2_VOORBEELD ? "'self' 'unsafe-inline'" : "'self'";
 const BEDRIJF = { naam: 'PlatforMaat', nummer: '1004.326.518', btw: 'BE 1004.326.518', adres: 'Meetjeslandstraat 44, 2660 Antwerpen' };
 
 const tekst = {};
@@ -95,7 +97,7 @@ function hoofd(t, sleutel, diepte, title, description, extraLd = []) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src ${STIJL}; script-src 'self'; font-src 'self'; connect-src 'self'; form-action 'self' mailto:; base-uri 'self'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
@@ -275,7 +277,7 @@ function kiezer() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src ${STIJL}; script-src 'self'; font-src 'self'; base-uri 'self'; object-src 'none'">
 <title>${esc(nl.kies.title)}</title>
 <meta name="description" content="${esc(nl.kies.lead)}">
 ${alt}
@@ -321,7 +323,7 @@ function fout404() {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; base-uri 'self'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src ${STIJL}; script-src 'self'; font-src 'self'; base-uri 'self'; object-src 'none'">
 <title>Pagina niet gevonden · Page introuvable · Page not found | PlatforMaat</title>
 <meta name="description" content="Deze pagina bestaat niet. Cette page n’existe pas. This page does not exist.">
 <link rel="icon" href="${b}assets/favicon.svg" type="image/svg+xml">
