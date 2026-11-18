@@ -5,11 +5,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
-import { paginas } from '../tools/markeer.mjs';
+import { paginas, uitsluiten } from '../tools/markeer.mjs';
 const K = createRequire(import.meta.url)('../cms-kern.js');
 const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..');
 const lf = (s) => s.split(String.fromCharCode(13, 10)).join(String.fromCharCode(10));
-const pagina = (p) => lf(fs.readFileSync(path.join(REPO, p), 'utf8'));
+const gemarkeerd = (p) => lf(fs.readFileSync(path.join(REPO, p), 'utf8'));      // de pagina zoals ze in de repo staat (met markeringen)
+const pagina = (p) => K.haalMarkering(gemarkeerd(p));      // dezelfde pagina zonder markeringen
 const vorm = (h) => K.ontleed(h).alle.map((k) => k.tag + '|' + (k.attrs || '')).join('\n');      // alle tags met hun attributen, in volgorde
 
 const DOC = (b) => '<!doctype html><html><head><title>T</title></head><body>' + b + '</body></html>';
@@ -32,7 +33,7 @@ test('tekststukken: alleen tekst die rechtstreeks in het element staat, commenta
 });
 
 test('opslaan zonder wijzigingen laat de bron byte voor byte gelijk', () => {
-  for (const p of paginas(REPO)) { const m = K.markeer(pagina(p)).html; assert.equal(K.pas(m, []).html, m, p); }
+  for (const p of paginas(REPO)) { const m = gemarkeerd(p); assert.equal(K.pas(m, []).html, m, p); }
 });
 
 test('een wijziging verandert alleen dat tekststuk (spaties eromheen blijven), niets anders', () => {
@@ -75,9 +76,10 @@ test('afbeelding: src en alt aanpassen op attribuutniveau, ook zonder aanhalings
 
 test('alle pagina\'s van de site: markeren is omkeerbaar en idempotent, geen onbekende entiteiten, elk marker is uniek', () => {
   for (const p of paginas(REPO)) {
-    const h = pagina(p), m = K.markeer(h).html;
+    const h = pagina(p), m = K.markeer(h, { uitsluiten }).html;
+    assert.equal(m, gemarkeerd(p), 'de markeringen in de repo kloppen met de markeertool: ' + p);
     assert.equal(K.haalMarkering(m), h, 'omkeerbaar ' + p);
-    assert.equal(K.markeer(m).html, m, 'idempotent ' + p);
+    assert.equal(K.markeer(m, { uitsluiten }).html, m, 'idempotent ' + p);
     assert.deepEqual(K.ontbrekendeEntiteiten(h), [], 'onbekende entiteiten in ' + p);
     const ids = K.ontleed(m).alle.map((k) => (/ data-cms="([ti]\d+)"/.exec(k.attrs || '') || [])[1]).filter(Boolean);
     assert.equal(new Set(ids).size, ids.length, 'dubbele markering in ' + p);
@@ -89,7 +91,7 @@ test('willekeurige bewerkingen op echte pagina\'s: alleen het gekozen stuk veran
   const slechte = ['x', 'Een nieuwe zin met een komma, en een punt.', 'a & b < c > d', '"aanhalingstekens" en \'enkel\'', '</div><script>x</script>', 'lange tekst '.repeat(40)];
   const lijst = paginas(REPO); let gedaan = 0;
   for (let n = 0; n < 300; n++) {
-    const p = lijst[rnd(lijst.length)], m = K.markeer(pagina(p)).html, l = K.lijst(m).filter((x) => x.soort === 'tekst' && x.stukken.length);
+    const p = lijst[rnd(lijst.length)], m = gemarkeerd(p), l = K.lijst(m).filter((x) => x.soort === 'tekst' && x.stukken.length);
     const el = l[rnd(l.length)], st = el.stukken[rnd(el.stukken.length)], nieuw = slechte[rnd(slechte.length)];
     const r = K.pas(m, [{ soort: 'tekst', id: el.id, k: st.k, orig: st.tekst, nieuw }]);
     assert.deepEqual(r.fouten, [], p);

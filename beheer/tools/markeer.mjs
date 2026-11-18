@@ -14,7 +14,7 @@ const REPO = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '.
 const NIET = new Set(['beheer/index.html', 'beheer/oud/index.html', 'venster/index.html']);
 // plekken waar het script van de site de tekst zelf zet (die tekst in de bron is dan niet wat de bezoeker ziet): niet markeren
 const DYNAMISCH = /\b(id="(demo-content|pf-now|form-status|contact-submit)"|class="(lbl|t-lbl)")/;
-const uitsluiten = (el) => { for (let o = el; o; o = o.ouder) if (DYNAMISCH.test(o.attrs || '')) return true; return false; };
+export const uitsluiten = (el) => { for (let o = el; o; o = o.ouder) if (DYNAMISCH.test(o.attrs || '')) return true; return false; };
 
 export function paginas(root = REPO) {
   const uit = [];
