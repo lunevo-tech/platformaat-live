@@ -34,3 +34,19 @@ html,body{margin:0;height:100%;background:#0b1522;color:#f2eadb;font:16px/1.5 sy
 .zm-login input{width:100%;box-sizing:border-box;font:inherit;padding:12px;border-radius:10px;border:1px solid rgba(242,234,219,.3);background:#0d1a2a;color:#f2eadb;margin:8px 0 12px}
 .zm-groot{font:inherit;min-height:48px;padding:0 24px;border-radius:999px;border:0;background:#f0b35a;color:#1a1205;font-weight:700;cursor:pointer}
 .zm-fout{color:#ff8a80}.zm-laden{padding:40px;text-align:center}
+.zm-h3{font:600 1rem system-ui,sans-serif;margin:14px 0 6px;color:#f0b35a}
+.zm-item{border:1px solid rgba(242,234,219,.2);border-radius:10px;padding:8px 10px;margin:8px 0}
+.zm-item p{margin:4px 0;overflow-wrap:anywhere}
+.zm-voor{color:#a9b4c2}.zm-na{color:#f2eadb}
+.zm-lbl{display:inline-block;min-width:3.4em;font-size:.75rem;text-transform:uppercase;letter-spacing:.04em;color:#f0b35a}
+.zm-mini{max-width:100%;max-height:120px;border-radius:6px;display:block}
+.zm-klein-knop{font:inherit;font-size:.85rem;min-height:32px;padding:0 12px;border-radius:999px;border:1px solid rgba(242,234,219,.3);background:transparent;color:#f2eadb;cursor:pointer;margin-top:4px}
+.zm-lijst{list-style:none;margin:10px 0 0;padding:0}.zm-lijst li{margin:4px 0}
+.zm-lijst button{width:100%;text-align:left;font:inherit;font-size:.9rem;padding:8px 10px;border-radius:8px;border:1px solid rgba(242,234,219,.2);background:#0d1a2a;color:#f2eadb;cursor:pointer}
+.zm-lijst button:hover{border-color:#f0b35a}
+.zm-ctrl ul{margin:6px 0;padding-left:0;list-style:none}.zm-ctrl li{margin:4px 0;color:#9be3b0}
+.zm-paneel label{display:block}
+.zm-bar button:focus-visible,.zm-bar select:focus-visible,.zm-paneel :focus-visible,.zm-login :focus-visible,.zm-lijst button:focus-visible{outline:3px solid #f0b35a;outline-offset:2px}
+.zm-paneel textarea:focus-visible{outline:3px solid #f0b35a}
+.zm-r2 select{min-height:34px;font-size:.85rem}
+.zm-paneel{box-sizing:border-box}
