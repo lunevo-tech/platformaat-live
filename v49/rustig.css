@@ -1,0 +1,46 @@
+/* 29 Licht rustig: 27 met vier «AI-kenmerken» weggehaald of verzacht; verder ongewijzigd (zelfde teksten, indeling, voorbeelden, huisstijl v2).
+   1. hoofdletterlabels met nummers en strakke letterafstand: gewone zinnen
+   2. het schema bovenaan: geen raster, geen gloed, geen schaduw; lijnen en pakketjes blijven
+   3. het zwevende contactbalkje: op de computer weg (contact staat in de kop, de pagina en de voet); op de telefoon een rij die vastzit aan de onderrand
+   4. de zwevende licht/donker-knop: een gewone tekstknop in de kop (op de telefoon in het menu)
+   Nummers vooraf in de lijst met onderdelen zijn ook weg. */
+.eyebrow, .mini-label, .stage-index, .blueprint-note, .stage-cap, .stage small, .sc-side, .win-url { text-transform: none !important; letter-spacing: 0 !important; }
+.eyebrow { font-size: 14px; font-weight: 600; line-height: 1.4; }
+.hero > .eyebrow { font-size: 14px; }
+.contact .eyebrow { font-size: 14px; }
+.mini-label { font-size: 13px; }
+.blueprint-note { font-size: 12px; }
+.core small { font-size: 11px; }
+.stage-index { display: none !important; }
+.ex-tabs .num { display: none; }
+.ex-tabs button { grid-template-columns: 1fr auto; }
+
+/* schema bovenaan: plat */
+.hero-stage .grid-plane { display: none; }
+.hero-stage .core, [data-theme="light"] .hero-stage .core, .hero-stage .core.is-hit { box-shadow: none !important; }
+.hero-stage .node, [data-theme="light"] .hero-stage .node, .hero-stage .node.is-sending { box-shadow: none !important; }
+.hero-stage .node.is-sending { border-color: #86a2ff; }
+.hero-stage .core.is-hit { transform: translate(-50%, -50%) scale(1.02); }
+
+/* contactbalk: niet meer zwevend */
+.dock { display: none; }
+@media (max-width: 800px) {
+  .dock { display: flex; left: 0; right: 0; bottom: 0; gap: 0; padding: 0; border-radius: 0; box-shadow: none; border-top: 1px solid #344663; }
+  .dock a { border-radius: 0; min-height: 54px; }
+  .site-foot { padding-bottom: 80px; }
+}
+
+/* licht/donker: gewone tekstknop in de kop */
+.theme-switch { position: static; z-index: auto; display: inline-flex; align-items: center; min-height: 44px; padding: 8px 4px; border: 0; border-radius: 0; background: none; box-shadow: none; color: inherit; font-size: 13px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; gap: 0; }
+[data-theme="dark"] .theme-switch { background: none; border: 0; color: inherit; }
+.theme-switch:hover { border: 0; color: var(--blue); }
+[data-theme="dark"] .theme-switch:hover { color: #86a2ff; }
+.theme-switch .theme-symbol { display: none; }
+@media (max-width: 850px) { .header nav .theme-switch { width: 100%; justify-content: flex-start; min-height: 48px; font-size: 15px; } }
+.footer { padding-bottom: 38px; }
+.foot-grid h3 { text-transform: none; letter-spacing: 0; font-size: 15px; }
+.core small, .core strong { letter-spacing: 0 !important; }
+.example-number, .steps article > span { letter-spacing: 0; }
+.example-number { display: none; }
+.example-options button { grid-template-columns: 1fr auto; }
+.stage::before { display: none; }
