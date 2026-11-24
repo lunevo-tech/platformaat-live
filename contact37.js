@@ -44,13 +44,13 @@
     var velden = form.querySelectorAll('[required]');
     for (var i = 0; i < velden.length; i++) {
       var el = velden[i];
-      el.setCustomValidity(el.value.trim() ? (el.type === 'email' && !el.checkValidity() ? 'Vul een geldig e-mailadres in.' : '') : 'Vul dit veld even in.');
+      el.setCustomValidity(el.value.trim() ? (el.type === 'email' && !el.checkValidity() ? 'Vul een geldig e-mailadres in.' : '') : 'Vul dit veld in.');
     }
     if (!form.reportValidity()) return;
     var w = waarden();
     if (w.website) { meld('Bedankt.', 'success'); form.reset(); return; }   /* lokveld voor spam: stil negeren */
     if (!actief) {
-      meld('Dit is een preview: er is niets verstuurd. Je tekst blijft staan. Kopieer je bericht of open het in je mailapp.', 'error');
+      meld('Dit is een voorvertoning: er is niets verstuurd. Je tekst blijft staan. Kopieer je bericht of open het in je e-mailapp.', 'error');
       return;
     }
     bezig = true; knop.disabled = true; var oud = knop.textContent; knop.textContent = 'Bezig met versturen…';
@@ -59,10 +59,10 @@
       .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }, function () { return { ok: false, j: null }; }); })
       .then(function (x) {
         if (!x.ok || !x.j || x.j.sent !== true) { meld((x.j && x.j.message) || 'Versturen lukt nu niet. Je tekst blijft staan; probeer later opnieuw of mail ons rechtstreeks.', 'error'); return; }
-        meld('Bedankt! Je vraag is verstuurd naar ' + MAIL + '. We nemen contact met je op via je e-mailadres.', 'success');
+        meld('Bedankt. Je vraag is verstuurd naar ' + MAIL + '. We nemen contact met je op via je e-mailadres.', 'success');
         form.reset(); ververs();
       })
-      .catch(function () { meld('We konden de verzending niet bevestigen. Je tekst blijft staan. Mail ons bij twijfel rechtstreeks, zodat je niets dubbel stuurt.', 'error'); })
+      .catch(function () { meld('We konden de verzending niet bevestigen. Je tekst blijft staan. Stuur ons bij twijfel rechtstreeks een e-mail, zodat je niets dubbel verstuurt.', 'error'); })
       .then(function () { bezig = false; knop.disabled = false; knop.textContent = oud; });
   });
 

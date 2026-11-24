@@ -8,7 +8,7 @@
 
   var cfg = {};
   try { cfg = JSON.parse(document.getElementById('pf-data').textContent); } catch (err) { cfg = {}; }
-  var ASST = cfg.assistenten || ['Klantenassistent', 'Planning-assistent', 'Rapport-assistent'];
+  var ASST = cfg.assistenten || ['Klantenassistent', 'Planningsassistent', 'Rapport-assistent'];
 
   var STATUS = [['nieuw', 'Nieuw'], ['bezig', 'In behandeling'], ['wacht', 'Wacht op klant'], ['klaar', 'Klaar']];
   var STATUS_L = { nieuw: 'Nieuw', bezig: 'In behandeling', wacht: 'Wacht op klant', klaar: 'Klaar' };
@@ -116,7 +116,7 @@
       '<div class="pf-brand"><span class="mk-s" aria-hidden="true"></span><b>Voorbeeldbedrijf</b></div>' +
       '<div class="pf-mode" role="group" aria-label="Kijk als">' +
       '<button type="button" data-act="mode" data-m="team" aria-pressed="' + team + '">Team</button>' +
-      '<button type="button" data-act="mode" data-m="klant" aria-pressed="' + !team + '">Klantportaal</button></div>' +
+      '<button type="button" data-act="mode" data-m="klant" aria-pressed="' + !team + '">Klantenportaal</button></div>' +
       '<div class="pf-acts">' +
       (team ? '<button type="button" class="pf-btn pf-btn--a" data-act="new">' + ic('plus') + '<span>Nieuw dossier</span><kbd>N</kbd></button>' : '<button type="button" class="pf-btn pf-btn--a" data-act="new">' + ic('plus') + '<span>Nieuwe aanvraag</span></button>') +
       '<button type="button" class="pf-btn" data-act="reset" title="Zet de voorbeeldgegevens terug">' + ic('reset') + '<span>Zet terug</span></button></div>';
@@ -508,7 +508,7 @@
       dr.note = ''; dr.zicht = false;
       renderChrome(); renderMain(); renderDetail(false);
       var nt = $('#pf-nt'); if (nt) nt.focus({ preventScroll: true });
-      toast(dr.zicht ? 'Bericht staat in het klantportaal.' : 'Notitie toegevoegd.');
+      toast(dr.zicht ? 'Bericht staat in het klantenportaal.' : 'Notitie toegevoegd.');
     } else if (kind === 'reply' && d) {
       var r = draft(id);
       d.berichten.push({ van: d.klant, klant: true, uit: 'klant', txt: txt, t: 'Zojuist' });

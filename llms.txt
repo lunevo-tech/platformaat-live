@@ -1,6 +1,6 @@
 # PlatforMaat
 
-> PlatforMaat bouwt software op maat, websites, koppelingen en AI-toepassingen voor kleine en middelgrote ondernemingen in België. Gevestigd in Antwerpen (Hoboken). Vaste prijs in een offerte op maat; gegevens van de klant zijn exporteerbaar en bij klantspecifiek maatwerk gaat de code over naar de klant; hosting in de EU met verwerkersovereenkomst (provider en regio staan in de offerte).
+> PlatforMaat bouwt software op maat, websites, koppelingen en AI-toepassingen voor kleine en middelgrote ondernemingen in België. Gevestigd in Antwerpen (Hoboken). Vaste prijs in een offerte op maat; gegevens van de klant zijn exporteerbaar en bij klantspecifiek maatwerk gaat de code over naar de klant; hosting in de EU met verwerkersovereenkomst (aanbieder en regio staan in de offerte).
 
 Bedrijfsgegevens: PlatforMaat is een eenmanszaak (handelsnaam), ondernemingsnummer en btw-nummer BE 1004.326.518, Meetjeslandstraat 44, 2660 Antwerpen. Contact: info@platformaat.be.
 
@@ -10,7 +10,7 @@ Bedrijfsgegevens: PlatforMaat is een eenmanszaak (handelsnaam), ondernemingsnumm
 - [Koppelingen, automatisering en data](https://platformaat.be/diensten/koppelingen.html)
 - [AI voor kmo's](https://platformaat.be/diensten/ai.html)
 - [Advies en ontwerp](https://platformaat.be/diensten/advies-ontwerp.html)
-- [Onderhoud en support](https://platformaat.be/diensten/onderhoud.html)
+- [Onderhoud en ondersteuning](https://platformaat.be/diensten/onderhoud.html)
 
 ## Praktijkvoorbeelden
 - [Offerteplatform voor een onderneming in vliegenramen en raamdecoratie](https://platformaat.be/case-vekemans.html): offerte van 15 minuten naar minder dan 1 minuut
@@ -28,12 +28,12 @@ Bedrijfsgegevens: PlatforMaat is een eenmanszaak (handelsnaam), ondernemingsnumm
 - [Overzicht van sectoren](https://platformaat.be/sectoren.html)
 
 ## Overzicht
-- [Wat we maken](https://platformaat.be/diensten.html)
+- [Diensten](https://platformaat.be/diensten.html)
 - [Ons werk](https://platformaat.be/werk.html)
-- [Prijzen](https://platformaat.be/prijzen.html)
+- [Prijs en offerte](https://platformaat.be/prijzen.html)
 - [Werkwijze](https://platformaat.be/werkwijze.html)
 
 ## Optioneel
 - [Bedrijfsgegevens](https://platformaat.be/bedrijfsgegevens.html)
 - [Privacy](https://platformaat.be/privacy.html)
-Prijzen: vanafprijzen per pakket staan op de pagina Prijzen (exclusief btw); de definitieve prijs is een vaste prijs in de offerte.
+Prijs: de pakketten staan op de pagina Prijs en offerte; de prijs is altijd een vaste prijs in de offerte.
