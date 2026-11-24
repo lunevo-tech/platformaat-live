@@ -18,18 +18,18 @@ document.addEventListener('keydown', event => {
     menuButton.focus();
   }
 });
-window.matchMedia('(min-width: 851px)').addEventListener('change', closeMenu);
+window.matchMedia('(min-width: 931px)').addEventListener('change', closeMenu);
 
 const demoContent = document.querySelector('#demo-content');
 const portalDemo = demoContent ? demoContent.innerHTML : '';
 const demos = {
   portal: portalDemo,
-  flow: `<div class="demo-app-heading"><div><small>SLIMME WORKFLOW</small><h3>Eén aanvraag. Alles in gang.</h3></div><span class="avatar">⇄</span></div>
+  flow: `<div class="demo-app-heading"><div><small>AUTOMATISCHE AFHANDELING</small><h3>Eén aanvraag, alles gestart.</h3></div><span class="avatar">⇄</span></div>
     <div class="flow-step"><span>↘</span><div><strong>Aanvraag ontvangen</strong><small>Via je website of klantenportaal</small></div></div><div class="flow-link"></div>
     <div class="flow-step"><span>⊞</span><div><strong>Klant en opdracht aangemaakt</strong><small>Gegevens rechtstreeks naar je CRM</small></div></div><div class="flow-link"></div>
     <div class="flow-step"><span>✓</span><div><strong>Je team kan aan de slag</strong><small>De juiste collega krijgt een taak</small></div></div>
-    <div class="demo-notice"><span>✓</span> Elke stap zichtbaar. Geen dubbel invoerwerk.</div>`,
-  insight: `<div class="demo-app-heading"><div><small>JE DAGELIJKS OVERZICHT</small><h3>Zie waar je staat.</h3></div><span class="avatar">▥</span></div>
+    <div class="demo-notice"><span>✓</span> Elke stap is zichtbaar, zonder dubbel invoerwerk.</div>`,
+  insight: `<div class="demo-app-heading"><div><small>JE DAGELIJKS OVERZICHT</small><h3>De stand van je opdrachten.</h3></div><span class="avatar">▥</span></div>
     <div class="demo-stats"><div><small>Lopende opdrachten</small><strong>12</strong></div><div><small>Vragen aandacht</small><strong>02 <span class="tiny-dot"></span></strong></div><div><small>Afgerond</small><strong>28</strong></div></div>
     <div class="chart" role="img" aria-label="Voorbeeldgrafiek met afgeronde opdrachten van maandag tot vrijdag"><div style="height:40%"><small>MA</small></div><div style="height:65%"><small>DI</small></div><div style="height:50%"><small>WO</small></div><div style="height:76%"><small>DO</small></div><div style="height:92%"><small>VR</small></div></div>
     <p class="chart-note">Voorbeeldcijfers · overzicht van je opdrachten</p>`

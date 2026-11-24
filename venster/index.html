@@ -17,7 +17,7 @@
 </defs></svg>
 <section class="demo" id="werkbank" aria-label="Voorbeeldplatform met verzonnen gegevens">
   <div class="wrap">
-    <div class="demo-top"><ul class="demo-try js-only" aria-label="Probeer bijvoorbeeld" hidden><li><button type="button" data-pf-go="dossier:D-1041">Open een dossier met een AI-concept</button></li><li><button type="button" data-pf-go="view:planning">Schuif iets naar een andere dag</button></li><li><button type="button" data-pf-go="view:assistent">Vraag het de assistent</button></li><li><button type="button" data-pf-go="mode:klant">Bekijk het als klant</button></li></ul><button type="button" class="demo-play" id="pf-replay" hidden>Speel de demo opnieuw af</button></div>
+    <div class="demo-top"><ul class="demo-try js-only" aria-label="Probeer bijvoorbeeld" hidden><li><button type="button" data-pf-go="dossier:D-1041">Open een dossier met een AI-concept</button></li><li><button type="button" data-pf-go="view:planning">Schuif iets naar een andere dag</button></li><li><button type="button" data-pf-go="view:assistent">Vraag het de assistent</button></li><li><button type="button" data-pf-go="mode:klant">Bekijk het als klant</button></li></ul><button type="button" class="demo-play" id="pf-replay" hidden>Speel het voorbeeld opnieuw af</button></div>
     <div class="pf" id="pf" data-mode="team" role="region" aria-label="Voorbeeldplatform met verzonnen gegevens">
       <div class="pf-bar" id="pf-bar"></div>
       <nav class="pf-side" id="pf-side" aria-label="Onderdelen van het voorbeeldplatform"></nav>
@@ -28,12 +28,12 @@
       <dialog class="pf-dlg" id="pf-dlg"></dialog>
       <div class="pf-cur" id="pf-cur" aria-hidden="true"><svg viewBox="0 0 20 20"><path d="M3 2l12 6.5-5.2 1.6L7.6 15.6z" fill="#fff" stroke="#14213d" stroke-width="1.2" stroke-linejoin="round"/></svg></div>
     </div>
-    <p class="demo-nojs">Dit voorbeeld heeft JavaScript nodig. Het toont een werkomgeving met overzicht, dossiers, planning, een assistent en koppelingen, en een klantportaal in dezelfde gegevens.</p>
+    <p class="demo-nojs">Dit voorbeeld heeft JavaScript nodig. Het toont een werkomgeving met overzicht, dossiers, planning, een assistent en koppelingen, en een klantenportaal op dezelfde gegevens.</p>
     <p class="demo-note">Voorbeeld met verzonnen gegevens · Klant A tot en met E bestaan niet</p>
-    <script type="application/json" id="pf-data">{"assistenten":["Klantenassistent","Planning-assistent","Rapport-assistent"]}</script>
+    <script type="application/json" id="pf-data">{"assistenten":["Klantenassistent","Planningsassistent","Rapport-assistent"]}</script>
   </div>
 </section>
-<script src="platform.js" defer></script>
+<script src="platform.js?v=48" defer></script>
 <script>
 (function () {
   'use strict';
@@ -64,7 +64,7 @@
     ['Het dossier schuift een dag op', '[data-act="shift"][data-dir="1"]:not(:disabled)'],
     ['De assistent een vraag stellen', '[data-act="nav"][data-v="assistent"]'],
     ['De assistent antwoordt, een mens controleert', '[data-act="ask"]:not(:disabled)'],
-    ['Het klantportaal: dezelfde gegevens, andere weergave', '[data-act="mode"][data-m="klant"]'],
+    ['Het klantenportaal: dezelfde gegevens, andere weergave', '[data-act="mode"][data-m="klant"]'],
     ['Terug naar het team', '[data-act="mode"][data-m="team"]'],
     ['De voorbeeldgegevens terugzetten en opnieuw beginnen', '[data-act="reset"]']
   ];
@@ -109,7 +109,7 @@
   function overnemen() {
     if (took) return;
     took = true; stop(); replay.hidden = false;
-    say('Je hebt het zelf overgenomen. Druk op «Speel de demo opnieuw af» om de demo weer te zien.');
+    say('Je hebt het zelf overgenomen. Druk op «Speel het voorbeeld opnieuw af» om het voorbeeld weer te zien.');
   }
   root.addEventListener('pointerdown', overnemen, true);
   root.addEventListener('keydown', overnemen, true);
@@ -120,7 +120,7 @@
   window.addEventListener('message', function (e) {
     var m = e.data || {};
     if (m.pmThema === 'dark' || m.pmThema === 'light') d.setAttribute('data-theme', m.pmThema);
-    if (m.pmBeweging) { allowed = m.pmBeweging === 'aan'; if (allowed) start(); else { stop(); say('De demo staat op pauze. Je kunt het venster zelf gebruiken of de beweging weer aanzetten.'); } }
+    if (m.pmBeweging) { allowed = m.pmBeweging === 'aan'; if (allowed) start(); else { stop(); say('Het voorbeeld staat op pauze. Je kunt het venster zelf gebruiken of de beweging weer aanzetten.'); } }
   });
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.js-only').forEach(function (n) { n.hidden = false; });

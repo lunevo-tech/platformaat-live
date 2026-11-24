@@ -12,7 +12,7 @@
     });
     nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', close); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && button.getAttribute('aria-expanded') === 'true') { close(); button.focus(); } });
-    window.matchMedia('(min-width: 851px)').addEventListener('change', close);
+    window.matchMedia('(min-width: 931px)').addEventListener('change', close);
   }
   var frame = document.querySelector('.pf-frame');
   if (frame) {

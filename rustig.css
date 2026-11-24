@@ -36,7 +36,7 @@
 .theme-switch:hover { border: 0; color: var(--blue); }
 [data-theme="dark"] .theme-switch:hover { color: #86a2ff; }
 .theme-switch .theme-symbol { display: none; }
-@media (max-width: 850px) { .header nav .theme-switch { width: 100%; justify-content: flex-start; min-height: 48px; font-size: 15px; } }
+@media (max-width: 930px) { .header nav .theme-switch { width: 100%; justify-content: flex-start; min-height: 48px; font-size: 15px; } }
 .footer { padding-bottom: 38px; }
 .foot-grid h3 { text-transform: none; letter-spacing: 0; font-size: 15px; }
 .core small, .core strong { letter-spacing: 0 !important; }
